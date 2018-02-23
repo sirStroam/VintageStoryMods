@@ -1,12 +1,12 @@
 {
 	code: "plankinnercornerstairs",
-	class: "game:BlockStairs",
+	class: "BlockStairs",
 	variantgroups: [
 		{ loadFromProperties: "game:block/woodwithaged" },
 		{ loadFromProperties: "game:abstract/verticalorientation" },
 		{ loadFromProperties: "game:abstract/horizontalorientation" }
 	],
-	creativeinventory: { "general": ["plankinnercornersstairs-{woodwithaged}-up-north"], "construction": ["plankinnercornersstairs-{woodwithaged}-up-north"] },
+	creativeinventory: { "general": ["plankinnercornerstairs-{woodwithaged}-up-north"], "construction": ["plankinnercornerstairs-{woodwithaged}-up-north"] },
 	sidesolidByType: {	
 		"*-up-north": { all:false, down:true, north: true },
 		"*-up-west": { all:false, down:true, west: true },
@@ -28,14 +28,14 @@
 		"*-down-east": { all:false, up:true, east: true },
 	},
 	shapebytype: { 
-		"*-up-north": { base: "block/innercornersstairs", rotateY: 0 },
-		"*-up-west": { base: "block/innercornersstairs", rotateY: 90 },
-		"*-up-south": { base: "block/innercornersstairs", rotateY: 180 },
-		"*-up-east": { base: "block/innercornersstairs", rotateY: 270 },
-		"*-down-north": { base: "block/innercornersstairs", rotateY: 0, rotateZ: 180 },
-		"*-down-west": { base: "block/innercornersstairs", rotateY: 90, rotateX: 180 },
-		"*-down-south": { base: "block/innercornersstairs", rotateY: 180, rotateZ: 180 },
-		"*-down-east": { base: "block/innercornersstairs", rotateY: 270, rotateX: 180 }
+		"*-up-north": { base: "block/innercornerstairs", rotateY: 0 },
+		"*-up-west": { base: "block/innercornerstairs", rotateY: 90 },
+		"*-up-south": { base: "block/innercornerstairs", rotateY: 180 },
+		"*-up-east": { base: "block/innercornerstairs", rotateY: 270 },
+		"*-down-north": { base: "block/innercornerstairs", rotateY: 0, rotateZ: 180 },
+		"*-down-west": { base: "block/innercornerstairs", rotateY: 90, rotateX: 180 },
+		"*-down-south": { base: "block/innercornerstairs", rotateY: 180, rotateZ: 180 },
+		"*-down-east": { base: "block/innercornerstairs", rotateY: 270, rotateX: 180 }
 	},
 	blockmaterial: "Wood",
 	drawtype: "json",

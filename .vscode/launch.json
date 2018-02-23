@@ -9,6 +9,7 @@
 		"args": [
 			"-p3", "--openWorld", "modding test world.vcdbs",
 			"--addOrigin", "${workspaceFolder}/TestMod/resources/assets",
+						   "${workspaceFolder}/FillTheGaps/resources/assets",
 		],
 		"console": "internalConsole",
 		"internalConsoleOptions": "openOnSessionStart",
@@ -21,6 +22,7 @@
 		"args": [
 			"-p3", "--openWorld", "modding test world.vcdbs",
 			"--addOrigin", "${workspaceFolder}/TestMod/resources/assets",
+						   "${workspaceFolder}/FillTheGaps/resources/assets",
 		],
 		"console": "internalConsole",
 		"internalConsoleOptions": "openOnSessionStart",

@@ -1,12 +1,12 @@
 {
 	code: "plankouttercornerstairs",
-	class: "game:BlockStairs",
+	class: "BlockStairs",
 	variantgroups: [
 		{ loadFromProperties: "game:block/woodwithaged" },
 		{ loadFromProperties: "game:abstract/verticalorientation" },
 		{ loadFromProperties: "game:abstract/horizontalorientation" }
 	],
-	creativeinventory: { "general": ["plankouttercornersstairs-{woodwithaged}-up-north"], "construction": ["plankouttercornersstairs-{woodwithaged}-up-north"] },
+	creativeinventory: { "general": ["plankouttercornerstairs-{woodwithaged}-up-north"], "construction": ["plankouttercornerstairs-{woodwithaged}-up-north"] },
 	sidesolidByType: {	
 		"*-up-north": { all:false, down:true, north: true },
 		"*-up-west": { all:false, down:true, west: true },
@@ -28,14 +28,14 @@
 		"*-down-east": { all:false, up:true, east: true },
 	},
 	shapebytype: { 
-		"*-up-north": { base: "block/outtercornersstairs", rotateY: 0 },
-		"*-up-west": { base: "block/outtercornersstairs", rotateY: 90 },
-		"*-up-south": { base: "block/outtercornersstairs", rotateY: 180 },
-		"*-up-east": { base: "block/outtercornersstairs", rotateY: 270 },
-		"*-down-north": { base: "block/outtercornersstairs", rotateY: 0, rotateZ: 180 },
-		"*-down-west": { base: "block/outtercornersstairs", rotateY: 90, rotateX: 180 },
-		"*-down-south": { base: "block/outtercornersstairs", rotateY: 180, rotateZ: 180 },
-		"*-down-east": { base: "block/outtercornersstairs", rotateY: 270, rotateX: 180 }
+		"*-up-north": { base: "block/outtercornerstairs", rotateY: 0 },
+		"*-up-west": { base: "block/outtercornerstairs", rotateY: 90 },
+		"*-up-south": { base: "block/outtercornerstairs", rotateY: 180 },
+		"*-up-east": { base: "block/outtercornerstairs", rotateY: 270 },
+		"*-down-north": { base: "block/outtercornerstairs", rotateY: 0, rotateZ: 180 },
+		"*-down-west": { base: "block/outtercornerstairs", rotateY: 90, rotateX: 180 },
+		"*-down-south": { base: "block/outtercornerstairs", rotateY: 180, rotateZ: 180 },
+		"*-down-east": { base: "block/outtercornerstairs", rotateY: 270, rotateX: 180 }
 	},
 	blockmaterial: "Wood",
 	drawtype: "json",
