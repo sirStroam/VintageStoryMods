@@ -9,8 +9,5 @@
 	sounds: {
 		"place": "game:block/anvil",
 		"walk": "game:walk/stone"
-	},
-	behaviors: [
-		{ name: "Carryable" }
-	]
+	}
 }

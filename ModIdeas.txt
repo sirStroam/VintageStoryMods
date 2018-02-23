@@ -2,7 +2,7 @@
 
 poles that only react to other poles unlike fences.
 bamboo saplings
-stairs connected textures
+stairs inside outside corners
 spiral stairs
 bamboo half slab
 recipe polished slab
@@ -46,3 +46,17 @@ advanced food
 ====functional rope====
 rope functions
 eye bolts
+
+
+
+===Purposeful creatures===
+fire hack-black kite- Spawns in grassland during clear skies, by unattended lit firepits with all surround blocks able to see sky. Grabs fire from the firepit to light nearby grass lands on fire. 
+
+dog training.
+
+
+
+=========next content update
+Chandelier block, Lantern update as showcased, tallow cooking system for candles and candle as block, maybe a new, super creepy underground creature, maybe finally lore pieces loot, perhaps bees and beekeeping in a super basic version
+
+
