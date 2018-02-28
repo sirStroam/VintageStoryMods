@@ -1,5 +1,5 @@
 {
-	code: "plankslabbamboo",
+	code: "plankslab",
 	class: "BlockSlab",
 	replaceable: 200,
 	variantgroups: [
@@ -36,8 +36,8 @@
 		"*-up": { x1: 0, y1: 0.5, z1: 0,   x2: 1, y2: 1, z2: 1 }
 	},
 	sounds: {
-        "place": "block/planks",
-		"walk": "walk/wood"
+        "place": "game:block/planks",
+		"walk": "game:walk/wood"
 	},
 	combustibleProps: {
 		burnTemperature: 800,

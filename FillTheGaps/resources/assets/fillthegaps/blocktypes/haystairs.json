@@ -1,12 +1,12 @@
 {
-	code: "claybrickstairs",
+	code: "haystairs",
 	class: "BlockStairs",
 	variantgroups: [
-		{ code:"type", states: ["blue", "brown", "fire", "red"] },
+		{ code:"type", states: ["normal", "bamboo"] },
 		{ loadFromProperties: "abstract/verticalorientation" },
 		{ loadFromProperties: "abstract/horizontalorientation" }
 	],
-	creativeinventory: { "general": ["claybrickstairs-{type}-up-north"], "construction": ["claybrickstairs-{type}-up-north"] },
+	creativeinventory: { "general": ["haystairs-{type}-up-north"], "construction": ["haystairs-{type}-up-north"] },
 	sidesolidByType: {	
 		"*-up-north": { all:false, down:true, north: true },
 		"*-up-west": { all:false, down:true, west: true },
@@ -37,16 +37,20 @@
 		"*-down-south": { base: "game:block/basic/stairs", rotateY: 180, rotateZ: 180 },
 		"*-down-east": { base: "game:block/basic/stairs", rotateY: 270, rotateX: 180 }
 	},
-	blockmaterial: "Ceramic",
+	blockmaterial: "Plant",
 	textures: {
-		all: { base: "game:block/clay/brick/{type}1",
-        	alternates: [ { base: "game:block/clay/brick/{type}2" } ] 
-        	},
+		horizontals: { base: "game:block/hay/{type}-side" },
+		verticals: { base: "game:block/hay/{type}-top" },
 	},
 	replaceable: 160,
-	resistance: 3,
+	resistance: 0.25,
 	sounds: {
-		"walk": "game:walk/stone",
-		"place": "game:block/ceramicplace"
+		place: "game:block/plant",
+		break: "game:block/plant",
+	},
+	materialDensity: 200,
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 5,
 	}
 }

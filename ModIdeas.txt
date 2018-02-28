@@ -14,16 +14,15 @@ rammed earth
 
 ====Blocks===
 stairs inside outside corners
-spiral stairs
-bamboo half slab
+>bamboo half slab
 reed and hay mat
-clay brick (slab, stairs)
-hay (slab, stairs)
-rock (stairs, slab)
+>clay brick (slab, stairs)
+>hay (slab, stairs)
+>rock (stairs, slab)
 
 ====recipes====
-Stone bricks,(block, slab, stairs)
-polished stone, (block, slab, stairs)
+>Stone bricks,(block, slab, stairs)
+>polished stone, (block, slab, stairs)
 blue & fireclay shingles(block, slab, stairs)
 
 

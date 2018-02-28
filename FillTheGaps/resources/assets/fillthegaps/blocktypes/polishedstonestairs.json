@@ -1,12 +1,12 @@
 {
-	code: "claybrickstairs",
+	code: "polishedstonestairs",
 	class: "BlockStairs",
 	variantgroups: [
-		{ code:"type", states: ["blue", "brown", "fire", "red"] },
+		{ loadFromProperties: "block/rock" },
 		{ loadFromProperties: "abstract/verticalorientation" },
 		{ loadFromProperties: "abstract/horizontalorientation" }
 	],
-	creativeinventory: { "general": ["claybrickstairs-{type}-up-north"], "construction": ["claybrickstairs-{type}-up-north"] },
+	creativeinventory: { "general": ["polishedstonestairs-{rock}-up-north"], "construction": ["polishedstonestairs-{rock}-up-north"] },
 	sidesolidByType: {	
 		"*-up-north": { all:false, down:true, north: true },
 		"*-up-west": { all:false, down:true, west: true },
@@ -37,16 +37,13 @@
 		"*-down-south": { base: "game:block/basic/stairs", rotateY: 180, rotateZ: 180 },
 		"*-down-east": { base: "game:block/basic/stairs", rotateY: 270, rotateX: 180 }
 	},
-	blockmaterial: "Ceramic",
+	blockmaterial: "Stone",
 	textures: {
-		all: { base: "game:block/clay/brick/{type}1",
-        	alternates: [ { base: "game:block/clay/brick/{type}2" } ] 
-        	},
+		all: {base: "game:block/stone/rockpolished/{rock}" },
 	},
 	replaceable: 160,
 	resistance: 3,
 	sounds: {
-		"walk": "game:walk/stone",
-		"place": "game:block/ceramicplace"
-	}
+		"walk": "game:walk/stone"
+    }
 }

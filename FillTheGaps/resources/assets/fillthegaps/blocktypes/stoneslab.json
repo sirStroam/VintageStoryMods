@@ -1,9 +1,9 @@
 {
-	code: "claybrickslab",
+	code: "stoneslab",
 	class: "BlockSlab",
 	replaceable: 200,
 	variantgroups: [
-        { code:"type", states: ["blue", "brown", "fire", "red"] },
+		{ loadFromProperties: "block/rock" },
 		{ code: "part", states: ["down", "up"] }
 	],
 	creativeinventory: { "general": ["*-down"], "construction": ["*-down"] },
@@ -23,9 +23,7 @@
 		all:false,
 	},
 	textures: {
-        all: { base: "game:block/clay/brick/{type}1",
-        alternates: [ { base: "game:block/clay/brick/{type}2" } ] 
-        },
+		all: { base: "game:block/stone/rock/{rock}" },
 	},
 	collisionboxByType: {
 		"*-down": { x1: 0, y1: 0, z1: 0,   x2: 1, y2: 0.5, z2: 1 },
@@ -36,11 +34,17 @@
 		"*-up": { x1: 0, y1: 0.5, z1: 0,   x2: 1, y2: 1, z2: 1 }
 	},
 	sounds: {
-        "walk": "game:walk/stone",
-        "place": "game:block/ceramicplace"
+		"walk": "game:walk/stone"
 	},
 	guiTransform: {
 		translation: { x: 0, y: 2, z: 0 },
 		origin: { x: 0.5, y: 0.25, z: 0.5 }
-	}
+    },
+    drops: [
+		{
+			type: "item", 
+			code: "game:stone-{rock}", 
+			quantity: { avg: 2.5, var: 0.5 } 
+		},
+	]
 }

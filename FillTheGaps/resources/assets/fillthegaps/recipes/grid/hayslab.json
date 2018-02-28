@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "GGG",
+	ingredients: {
+		"G": { type: "item", code: "game:drygrass" }
+	},
+	width: 3,
+	height: 1,
+	output: { type: "block", code: "hayslab-normal-down", quantity: 1  }
+}
