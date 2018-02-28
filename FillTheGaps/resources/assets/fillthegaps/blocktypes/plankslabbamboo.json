@@ -1,0 +1,51 @@
+{
+	code: "plankslabbamboo",
+	class: "BlockSlab",
+	replaceable: 200,
+	variantgroups: [
+		{ code: "type", states: ["bamboo"] },
+		{ code: "part", states: ["down", "up"] }
+	],
+	blockmaterial: "Wood",
+	creativeinventory: { "general": ["*-down"], "construction": ["*-down"] },
+	shapeByType: {
+		"*-down" : { base: "game:block/basic/slab" },
+		"*-up" : { base: "game:block/basic/slab-up" },
+	},
+	sidesolidByType: {
+		"*-down": { all: false, down: true },
+		"*-up": { all: false, up: true },
+	},
+	sideopaqueByType: {
+		"*-down": { all: false, down: true },
+		"*-up": { all: false, up: true },
+	},
+	sideAo: {
+		all:false,
+	},
+	textures: {
+        horizontals: { base: "game:block/wood/planks/{type}-side" },
+		verticals: { base: "game:block/wood/planks/{type}-top" },
+	},
+	collisionboxByType: {
+		"*-down": { x1: 0, y1: 0, z1: 0,   x2: 1, y2: 0.5, z2: 1 },
+		"*-up": { x1: 0, y1: 0.5, z1: 0,   x2: 1, y2: 1, z2: 1 }
+	},
+	selectionboxByType: {
+		"*-down": { x1: 0, y1: 0, z1: 0,   x2: 1, y2: 0.5, z2: 1 },
+		"*-up": { x1: 0, y1: 0.5, z1: 0,   x2: 1, y2: 1, z2: 1 }
+	},
+	sounds: {
+        "place": "block/planks",
+		"walk": "walk/wood"
+	},
+	combustibleProps: {
+		burnTemperature: 800,
+		burnDuration: 24,
+	},
+	materialDensity: 400,
+	guiTransform: {
+		translation: { x: 0, y: 2, z: 0 },
+		origin: { x: 0.5, y: 0.25, z: 0.5 }
+	}
+}

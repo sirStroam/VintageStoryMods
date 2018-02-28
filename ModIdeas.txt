@@ -1,13 +1,9 @@
 
-
+texture pack for more visible ore.
+place items down on ground
+Fuse trails with blasting powder
 poles that only react to other poles unlike fences.
 bamboo saplings
-stairs inside outside corners
-spiral stairs
-bamboo half slab
-recipe polished slab
-recipe stone brick block, slab, stairs, 
-recipe shingle block and half slab (blue, fireclay)
 rope recipe
 rope ladders
 vessel
@@ -15,6 +11,21 @@ animal cages
 wood pile
 rock pile
 rammed earth
+
+====Blocks===
+stairs inside outside corners
+spiral stairs
+bamboo half slab
+reed and hay mat
+clay brick (slab, stairs)
+hay (slab, stairs)
+rock (stairs, slab)
+
+====recipes====
+Stone bricks,(block, slab, stairs)
+polished stone, (block, slab, stairs)
+blue & fireclay shingles(block, slab, stairs)
+
 
 ====Fabric update====
 leather processing
@@ -46,6 +57,9 @@ advanced food
 ====functional rope====
 rope functions
 eye bolts
+
+====decor====
+hanging planters
 
 
 

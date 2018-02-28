@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "_RR	RHR	RRR",
+	ingredients: {
+		"H": { type: "item", code: "game:hammer-*", isTool: true },
+		"R": { type: "block", code: "game:rock-*", name: "rock", allowedVariants:["andesite", "chalk", "claystone", "granite", "sandstone", "shale", "basalt"] }
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "game:stonebrickstairs-{rock}-up-north", quantity: 8  }
+}

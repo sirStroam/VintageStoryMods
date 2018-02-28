@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "_BB	BCB	BBB",
+	ingredients: {
+		"C": { type: "item", code: "game:clay-*" },
+		"B": { type: "item", code: "game:burnedbrick-*", name: "type" }
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "claybrickstairs-{type}-up-north", quantity: 2  }
+}
