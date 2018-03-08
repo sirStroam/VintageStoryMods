@@ -1,9 +1,0 @@
-{
-	ingredientPattern: "DD,DD",
-	ingredients: {
-		"D": { type: "block", code: "game:soil-medium-none" }
-	},
-	width: 2,
-	height: 2,
-	output: { type: "block", code: "rammedearth-medium", quantity: 1  }
-}

@@ -20,6 +20,7 @@ namespace RopeLadder
 		
 		public override void Start(ICoreAPI api)
 		{
+			//api.RegisterBlockBehaviorClass(BlockBehaviorRopeLadder.NAME, typeof(BlockBehaviorRopeLadder));
 			base.Start(api);
 			INSTANCE = this;
 		}

@@ -11,6 +11,7 @@ namespace TestMod
 		public static TestMod INSTANCE { get; private set; }
 		
 		public static ModInfo MOD_INFO { get; } = new ModInfo {
+			Type		= EnumModType.Code,
 			Name        = "TestMod",
 			Description = "Example mod for testing things",
 			Author      = "stroam",
@@ -27,19 +28,10 @@ namespace TestMod
         
 		public override void Start(ICoreAPI api)
 		{
-            api.RegisterBlockBehaviorClass(BlockBehaviorRopeLadder.NAME, typeof(BlockBehaviorRopeLadder));
+			api.RegisterBlockBehaviorClass(BlockBehaviorRopeLadder.NAME, typeof(BlockBehaviorRopeLadder));
+			//api.RegisterBlockBehaviorClass("RotateBehavior", typeof(RotateBehavior));
 			base.Start(api);
 			INSTANCE = this;
-		}
-		
-		public override void StartServerSide(ICoreServerAPI api)
-		{
-			
-		}
-		
-		public override void StartClientSide(ICoreClientAPI api)
-		{
-			
 		}
 	}
 }
