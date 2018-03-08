@@ -1,6 +1,6 @@
 
 texture pack for more visible ore.
-place items down on ground
+place items down on ground (sneak+righclick)
 Fuse trails with blasting powder
 poles that only react to other poles unlike fences.
 bamboo saplings
@@ -8,50 +8,112 @@ rope recipe
 rope ladders
 vessel
 animal cages
-wood pile
-rock pile
-rammed earth
+
+====Environment====
+branches and shrubs slow you down
+TFC style sand and dirt
 
 ====Blocks===
+wood pile
+rock pile
+
+adobe & mud bricks(each stone type)
+
 stairs inside outside corners
->bamboo half slab
 reed and hay mat
->clay brick (slab, stairs)
->hay (slab, stairs)
->rock (stairs, slab)
 
 ====recipes====
->Stone bricks,(block, slab, stairs)
->polished stone, (block, slab, stairs)
 blue & fireclay shingles(block, slab, stairs)
 
+====tools====
+chisel
+tamper for rammed earth
+levigator for polished stone
+bush hammer - stone containers
 
 ====Fabric update====
-leather processing
-loom
 leather and fabric frames
 leather and fabric doors and curtains
 dyes
-barrel(working)
 clothing
-fur
 armor - Helmet,neck, breast, belly, waist, shoulder, upper arm, elbow, lower arm, hands, upper calf, knee, lower calf, boots
+patterns, blue prints, wooden models, dynamic models.
+
+====Cloth production update====
+----flax & hemp processing----
+soaking
+retting
+(animal wools starts here with washing)
+combing/carding
+spinning
+weaving
+
+---carding---
+carding - produces 30% fine and coarse fibers at best.
+card upgrades increase fine fibers up to 30%
+card upgrades(teasel flowers, woodcombs, ceiling bows, metal)
+
+---spinning---
+drop spindle(like bow and arrow) 
+spinning wheel(like tfc quern) process more than one twine at a time.
+
+---weaving---
+warp weighted loom
+horizontal loom
+
+
+====leather processing update====
+salting for preservation
+soaking
+soaking in ash water or lime water
+stretching
+scraping flesh side
+scraping hair side for rawhide or leave for fur
+trimming the hide
+braining with brains and fat
+smoking
+beating the hide
+stretching the hide again
+
+fur
+scraps can be turned into glue with prolonged soaking and boiling.
+tanning is found in bark and in bogs
+barrel(working)
+
 
 ====Silk update====
 silk cocoons
 Eri silk
 Eri silkworm - white and spikey
 moth - brown
-Samia cynthia
+Samia cynthia - yellow silk
+bombyx mori - white silk
+Attacus atlas - brown silk
 silk processiong - harvest cocoon, boil, spinning reel
 
 ====bag update====
 quiver
 seed bag
 tool belt
+chicken & baby bag
 
-====cooking update====
+====cooking update==== 
+(potatoe, beets, pursley, leek, chard, garlic, chickpeas, fava beans, field peas)
+beet sugar
 advanced food
+blue berry scone
+--medieval food--
+spiced sugar
+pumkin pie
+strudle
+apple fritter
+potage -cabbage meat onion
+pursley salad
+potage and stew were the stables
+tart
+spiced meat
+
+
 
 ====functional rope====
 rope functions

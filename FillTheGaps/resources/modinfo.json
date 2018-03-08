@@ -1,9 +1,9 @@
 
 {
-	"type": "code",
+	"type": "content",
 	"name": "Fill the Gaps",
-	"description" : "Adding quick content",
+	"description" : "Adding missing basics",
 	"author": "Stroam",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"gameversions": [ "1.5.1.2+" ]
 }

@@ -1,8 +1,8 @@
 {
 	code: "ropeladder",
-	behaviors: [{name: "AddBelow"}],
+	behaviors: [{name: "RopeLadder"}],
 	variantgroups: [
-		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
+		{ loadFromProperties: "abstract/horizontalorientation" }
 	],
 	creativeinventory: { "general": ["ropeladder-north"], "decorative": ["ropeladder-north"] },	
 	shapeinventory: { base: "block/ropeladder" },
@@ -54,5 +54,6 @@
 			"*-north": 0
 		}
 	},
+	rainPermeable: true,
 	materialDensity: 600
 }

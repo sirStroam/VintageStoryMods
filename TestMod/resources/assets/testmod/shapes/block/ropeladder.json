@@ -6,7 +6,7 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textures": {
-		"ropeladder": "ropeladder"
+		"ropeladder": "D:/Github repositories/VintageStoryMods/TestMod/resources/assets/testmod/textures/ropeladder"
 	},
 	"elements": [
 		{
@@ -18,8 +18,8 @@
 				"east": { "texture": "#ropeladder", "uv": [ 1.0, 0.0, 2.0, 16.0 ], "rotation": 180 },
 				"south": { "texture": "#ropeladder", "uv": [ 0.0, 0.0, 1.0, 16.0 ], "rotation": 180 },
 				"west": { "texture": "#ropeladder", "uv": [ 1.0, 0.0, 2.0, 16.0 ], "rotation": 180 },
-				"up": { "texture": "#ropeladder", "uv": [ 2.0, 14.0, 3.0, 15.0 ], "rotation": 180 },
-				"down": { "texture": "#ropeladder", "uv": [ 2.0, 15.0, 3.0, 16.0 ] }
+				"up": { "texture": "#ropeladder", "uv": [ 1.0, 14.0, 2.0, 15.0 ], "rotation": 180 },
+				"down": { "texture": "#ropeladder", "uv": [ 1.0, 15.0, 2.0, 16.0 ] }
 			}
 		},
 		{
@@ -31,8 +31,8 @@
 				"east": { "texture": "#ropeladder", "uv": [ 1.0, 0.0, 2.0, 16.0 ] },
 				"south": { "texture": "#ropeladder", "uv": [ 0.0, 0.0, 1.0, 16.0 ] },
 				"west": { "texture": "#ropeladder", "uv": [ 1.0, 0.0, 2.0, 16.0 ] },
-				"up": { "texture": "#ropeladder", "uv": [ 2.0, 14.0, 3.0, 15.0 ] },
-				"down": { "texture": "#ropeladder", "uv": [ 2.0, 15.0, 3.0, 16.0 ] }
+				"up": { "texture": "#ropeladder", "uv": [ 1.0, 14.0, 2.0, 15.0 ] },
+				"down": { "texture": "#ropeladder", "uv": [ 1.0, 15.0, 2.0, 16.0 ] }
 			}
 		},
 		{
@@ -68,10 +68,10 @@
 			"faces": {
 				"north": { "texture": "#ropeladder", "uv": [ 0.0, 0.0, 1.0, 3.0 ] },
 				"east": { "texture": "#ropeladder", "uv": [ 10.0, 13.0, 13.0, 16.0 ] },
-				"south": { "texture": "#ropeladder", "uv": [ 1.0, 0.0, 2.0, 3.0 ] },
+				"south": { "texture": "#ropeladder", "uv": [ 0.0, 9.0, 1.0, 12.0 ] },
 				"west": { "texture": "#ropeladder", "uv": [ 13.0, 13.0, 16.0, 16.0 ] },
-				"up": { "texture": "#ropeladder", "uv": [ 0.0, 3.0, 1.0, 6.0 ] },
-				"down": { "texture": "#ropeladder", "uv": [ 1.0, 3.0, 2.0, 6.0 ] }
+				"up": { "texture": "#ropeladder", "uv": [ 0.0, 4.0, 1.0, 7.0 ] },
+				"down": { "texture": "#ropeladder", "uv": [ 1.0, 6.0, 2.0, 9.0 ] }
 			}
 		},
 		{

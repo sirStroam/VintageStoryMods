@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "ML,LM",
+	ingredients: {
+        "L": { type: "block", code: "game:soil-low-none" },
+        "M": { type: "block", code: "game:soil-medium-none" }
+	},
+	width: 2,
+	height: 2,
+	output: { type: "block", code: "rammedearth-mixed", quantity: 1  }
+}

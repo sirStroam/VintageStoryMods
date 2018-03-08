@@ -1,3 +1,4 @@
+
 using System;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
@@ -12,14 +13,21 @@ namespace TestMod
 		public static ModInfo MOD_INFO { get; } = new ModInfo {
 			Name        = "TestMod",
 			Description = "Example mod for testing things",
-			Author      = "Stroam",
+			Author      = "stroam",
 		};
 		
 		
 		public override ModInfo GetModInfo() { return MOD_INFO; }
 		
+        // Client
+
+        //Server
+
+        //Common
+        
 		public override void Start(ICoreAPI api)
 		{
+            api.RegisterBlockBehaviorClass(BlockBehaviorRopeLadder.NAME, typeof(BlockBehaviorRopeLadder));
 			base.Start(api);
 			INSTANCE = this;
 		}
@@ -35,3 +43,4 @@ namespace TestMod
 		}
 	}
 }
+

@@ -1,0 +1,21 @@
+{
+	code: "wicker",
+	shape: { base: "game:block/basic/cube" },
+    drawtype: "Cube",
+    sideopaqueByType	: { "*":{all:false}},
+	blockmaterial: "Leaves",
+	creativeinventory: { "general": ["*"], "construction": ["*"] },
+	replaceable: 400,
+	resistance: 1.5,
+	textures: {
+        all: { 
+            base: "block/wicker/wicker1",
+            alternates: [{base: "block/wicker/wicker2" }, {base: "block/wicker/wicker3" }, {base: "block/wicker/wicker4" }], 
+        },
+	},
+	sounds: {
+		place: "game:block/plant",
+		break: "game:block/plant",
+		walk: "game:walk/grass"
+	}
+}

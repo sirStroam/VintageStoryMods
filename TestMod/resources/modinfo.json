@@ -1,6 +1,6 @@
 
 {
-	"type": "core",
+	"type": "code",
 	"name": "TestMod",
 	"description" : "Example mod for testing things",
 	"author": "Stroam",

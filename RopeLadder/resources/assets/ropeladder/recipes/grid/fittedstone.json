@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "RR,RR",
+	ingredients: {
+		"R": { type: "item", code: "game:stone-*" }
+	},
+	width: 2,
+	height: 2,
+	output: { type: "block", code: "fittedstone", quantity: 1  }
+}

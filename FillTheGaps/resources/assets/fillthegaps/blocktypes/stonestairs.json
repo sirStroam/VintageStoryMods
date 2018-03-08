@@ -49,7 +49,7 @@
     drops: [
 		{
 			type: "item", 
-			code: "fame:stone-{rock}", 
+			code: "game:stone-{rock}", 
 			quantity: { avg: 2.5, var: 0.5 } 
 		},
 	]
