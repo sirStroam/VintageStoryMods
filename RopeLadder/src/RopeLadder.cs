@@ -10,6 +10,7 @@ namespace RopeLadder
 		public static RopeLadder INSTANCE { get; private set; }
 		
 		public static ModInfo MOD_INFO { get; } = new ModInfo {
+			Type		= EnumModType.Code,
 			Name        = "Rope Ladder",
 			Description = "Adds rope ladder",
 			Author      = "Stroam",
@@ -20,19 +21,10 @@ namespace RopeLadder
 		
 		public override void Start(ICoreAPI api)
 		{
-			//api.RegisterBlockBehaviorClass(BlockBehaviorRopeLadder.NAME, typeof(BlockBehaviorRopeLadder));
+			api.RegisterBlockBehaviorClass(BlockBehaviorRopeLadder.NAME, typeof(BlockBehaviorRopeLadder));
 			base.Start(api);
 			INSTANCE = this;
 		}
 		
-		public override void StartServerSide(ICoreServerAPI api)
-		{
-			
-		}
-		
-		public override void StartClientSide(ICoreClientAPI api)
-		{
-			
-		}
 	}
 }

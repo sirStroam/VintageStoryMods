@@ -1,3 +1,6 @@
 {
-
+    "block-ropeladder-north": "Rope Ladder",
+    "block-ropeladder-west": "Rope Ladder",
+    "block-ropeladder-south": "Rope Ladder",
+    "block-ropeladder-east": "Rope Ladder"
 }

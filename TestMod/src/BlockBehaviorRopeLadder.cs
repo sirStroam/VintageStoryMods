@@ -1,5 +1,6 @@
 using Vintagestory.API;
 using Vintagestory.API.Common;
+using Vintagestory.API.Common.Entities;
 using Vintagestory.API.MathTools;
 
 namespace TestMod
@@ -8,8 +9,8 @@ namespace TestMod
 	{
 		public static string NAME { get; } = "RopeLadder";
 
-        private string dropBlockFace = "north";
-        private string ownFirstCodePart;
+    private string dropBlockFace = "north";
+    private string ownFirstCodePart;
 		
 		public BlockBehaviorRopeLadder(Block block)
 			: base(block) 
@@ -19,55 +20,105 @@ namespace TestMod
 		
 		public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, IItemStack itemstack, BlockSelection blockSel, ref EnumHandling handling)
         {
-            handling = EnumHandling.PreventDefault;
-            BlockPos position = blockSel.Position;
-            Block block1 = world.BlockAccessor.GetBlock(position);
-            BlockPos blockPos = blockSel.DidOffset ? position.AddCopy(blockSel.Face.GetOpposite()) : blockSel.Position;
+          handling = EnumHandling.PreventDefault;
+          BlockPos position = blockSel.Position;
+          Block block1 = world.BlockAccessor.GetBlock(position);
+          //Block tempBlock = blockSel.DidOffset ? world.BlockAccessor.GetBlock(position.AddCopy(blockSel.Face.GetOpposite())) : block1;
+          //BlockPos blockPos = blockSel.DidOffset ? position.AddCopy(blockSel.Face.GetOpposite()) : blockSel.Position;
+
             if (block1.IsReplacableBy(this.block))
             {
                 AssetLocation code1 = this.block.CodeWithParts(Block.SuggestedHVOrientation(byPlayer, blockSel)[0].Code);
                 Block block3 = world.BlockAccessor.GetBlock(code1);
-                Block block4 = world.BlockAccessor.GetBlock(position.X, position.Y + 1, position.Z);
-                if (block4.FirstCodePart(0) == this.ownFirstCodePart && this.HasSupport(block4, world.BlockAccessor, position))
-                {
-                    block4.DoPlaceBlock(world, position, blockSel.Face);
+
+                //BlockPos pos2 = blockPos.DownCopy(1);
+                //while(world.BlockAccessor.GetBlock(pos2).FirstCodePart(0) == this.ownFirstCodePart)
+                //{pos2 = pos2.DownCopy(1);} //shuffles down until below the chain
+                //Block block7 = world.BlockAccessor.GetBlock(pos2);
+                /*if (tempBlock.FirstCodePart(0) == this.ownFirstCodePart && block7.IsReplacableBy(this.block) && !CollisionTester.AabbIntersect(byPlayer.Entity.CollisionBox, byPlayer.Entity.Pos.X, byPlayer.Entity.Pos.Y, byPlayer.Entity.Pos.Z, Cuboidf.Default(), new Vec3d((double)pos2.X, (double)pos2.Y, (double)pos2.Z)))
+                { //adds to the chain
+                    tempBlock.DoPlaceBlock(world, pos2, blockSel.Face);
                     return true;
-                }
-                Block block5 = world.BlockAccessor.GetBlock(position.X, position.Y - 1, position.Z);
-                if (block5.FirstCodePart(0) == this.ownFirstCodePart && this.HasSupport(block5, world.BlockAccessor, position) && !CollisionTester.AabbIntersect(byPlayer.Entity.CollisionBox, byPlayer.Entity.Pos.X, byPlayer.Entity.Pos.Y, byPlayer.Entity.Pos.Z, Cuboidf.Default(), new Vec3d((double)position.X, (double)position.Y, (double)position.Z)))
-                {
-                    block5.DoPlaceBlock(world, position, blockSel.Face);
-                    return true;
-                }
-                BlockPos pos1 = blockPos.UpCopy(1);
-                Block block6 = world.BlockAccessor.GetBlock(pos1);
-                Block block2 = blockSel.DidOffset ? world.BlockAccessor.GetBlock(position.AddCopy(blockSel.Face.GetOpposite())) : block1;
-                if (block2.FirstCodePart(0) == this.ownFirstCodePart && block6.IsReplacableBy(this.block) && !CollisionTester.AabbIntersect(byPlayer.Entity.CollisionBox, byPlayer.Entity.Pos.X, byPlayer.Entity.Pos.Y, byPlayer.Entity.Pos.Z, Cuboidf.Default(), new Vec3d((double)pos1.X, (double)pos1.Y, (double)pos1.Z)))
-                {
-                    block2.DoPlaceBlock(world, pos1, blockSel.Face);
-                    return true;
-                }
-                BlockPos pos2 = blockPos.DownCopy(1);
-                Block block7 = world.BlockAccessor.GetBlock(pos2);
-                if (block2.FirstCodePart(0) == this.ownFirstCodePart && block7.IsReplacableBy(this.block) && !CollisionTester.AabbIntersect(byPlayer.Entity.CollisionBox, byPlayer.Entity.Pos.X, byPlayer.Entity.Pos.Y, byPlayer.Entity.Pos.Z, Cuboidf.Default(), new Vec3d((double)pos2.X, (double)pos2.Y, (double)pos2.Z)))
-                {
-                    block2.DoPlaceBlock(world, pos2, blockSel.Face);
-                    return true;
-                }
-                if (this.HasSupport(block3, world.BlockAccessor, position))
-                {
+                }*/
+                if (this.HasSupport(block3, world.BlockAccessor, position)) 
+                { //starts new chain
                     block3.DoPlaceBlock(world, position, blockSel.Face);
                     return true;
                 }
-                AssetLocation code2 = this.block.CodeWithParts(blockSel.Face.GetOpposite().Code);
-                Block block8 = world.BlockAccessor.GetBlock(code2);
-                if (block8 != null && this.HasSupport(block8, world.BlockAccessor, position))
-                {
-                    block8.DoPlaceBlock(world, position, blockSel.Face);
-                    return true;
-                }
+
             }
-            return false;
+          
+          return false;
+    }
+
+    public override bool OnPlayerBlockInteract(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
+    {
+      bool sneak = byPlayer.Entity.Controls.Sneak;
+          
+      handling = EnumHandling.PreventDefault;
+      BlockPos position = blockSel.Position;
+      Block block1 = world.BlockAccessor.GetBlock(position);
+      Block tempBlock = blockSel.DidOffset ? world.BlockAccessor.GetBlock(position.AddCopy(blockSel.Face.GetOpposite())) : block1;
+      BlockPos blockPos = blockSel.DidOffset ? position.AddCopy(blockSel.Face.GetOpposite()) : blockSel.Position;
+      if(!sneak)
+      {
+        if(this.GetNextRopeLadder(byPlayer.Entity) == null) return false;
+        
+          AssetLocation code1 = this.block.CodeWithParts(Block.SuggestedHVOrientation(byPlayer, blockSel)[0].Code);
+          Block block3 = world.BlockAccessor.GetBlock(code1);
+
+          BlockPos pos2 = blockPos.DownCopy(1);
+          while(world.BlockAccessor.GetBlock(pos2).FirstCodePart(0) == this.ownFirstCodePart)
+          {pos2 = pos2.DownCopy(1);} //shuffles down until below the chain
+          Block block7 = world.BlockAccessor.GetBlock(pos2);
+          if (tempBlock.FirstCodePart(0) == this.ownFirstCodePart && block7.IsReplacableBy(this.block) && !CollisionTester.AabbIntersect(byPlayer.Entity.CollisionBox, byPlayer.Entity.Pos.X, byPlayer.Entity.Pos.Y, byPlayer.Entity.Pos.Z, Cuboidf.Default(), new Vec3d((double)pos2.X, (double)pos2.Y, (double)pos2.Z)))
+          { //adds to the chain
+            tempBlock.DoPlaceBlock(world, pos2, blockSel.Face);
+            return true;
+          }
+          /*if (this.HasSupport(block3, world.BlockAccessor, position)) 
+          { //starts new chain
+            block3.DoPlaceBlock(world, position, blockSel.Face);
+            return true;
+          }*/
+
+        
+      } else //if(tempBlock.FirstCodePart(0) == this.ownFirstCodePart)
+      {
+        BlockPos pos2 = blockPos;
+        BlockPos posNext = blockPos.DownCopy(1);
+        while(world.BlockAccessor.GetBlock(posNext).FirstCodePart(0) == this.ownFirstCodePart)
+        { //shuffles down chain till at the end
+          pos2 = posNext;
+          posNext = posNext.DownCopy(1);
+        }
+        Block lastLadder = world.BlockAccessor.GetBlock(pos2);
+
+        world.BlockAccessor.SetBlock((ushort) 0, pos2);//.BreakBlock(pos2,byPlayer, 0F);
+            
+        ItemStack ladderstack = new ItemStack(world.BlockAccessor.GetBlock(this.block.CodeWithParts(this.dropBlockFace)), 1);
+        ladderstack.StackSize = 1;
+
+            //world.SpawnItemEntity( ladderstack, byPlayer.WorldData.EntityPlayer.LocalPos.XYZ);//, byPlayer.WorldData.EntityPlayer.Pos.Motion); 
+        return byPlayer.InventoryManager.TryGiveItemstack(ladderstack);
+
+      }
+      return false;
+
+    }
+
+    private IItemSlot GetNextRopeLadder(IEntityAgent byEntity)
+    {
+      IItemSlot slot = (IItemSlot) null;
+      byEntity.WalkInventory((OnInventorySlot) (invslot =>
+      {
+        if (invslot is CreativeSlot || invslot.Itemstack == null || !invslot.Itemstack.Collectible.Code.Path.StartsWith("ropeladder"))
+          return true;
+        slot = invslot;
+        return false;
+      }));
+      slot.Itemstack.StackSize--;
+      return slot;
     }
 
     public override void OnNeighourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos, ref EnumHandling handling)
@@ -109,10 +160,10 @@ namespace TestMod
       BlockFacing facing = BlockFacing.FromCode(forBlock.LastCodePart(0));
       BlockPos pos1 = pos.DownCopy(1);
       BlockPos pos2 = pos.UpCopy(1);
-      if (this.SideSolid(blockAccess, pos, facing) || this.SideSolid(blockAccess, pos1, BlockFacing.DOWN) || this.SideSolid(blockAccess, pos2, BlockFacing.UP) || pos.Y < blockAccess.MapSizeY - 1 && blockAccess.GetBlock(pos2) == forBlock && this.HasSupportUp(forBlock, blockAccess, pos2))
+      if (this.SideSolid(blockAccess, pos, facing) /*|| this.SideSolid(blockAccess, pos1, BlockFacing.DOWN)*/ || this.SideSolid(blockAccess, pos2, BlockFacing.UP) || pos.Y < blockAccess.MapSizeY - 1 && blockAccess.GetBlock(pos2) == forBlock && this.HasSupportUp(forBlock, blockAccess, pos2))
         return true;
-      if (pos.Y > 0 && blockAccess.GetBlock(pos1) == forBlock)
-        return this.HasSupportDown(forBlock, blockAccess, pos1);
+      //if (pos.Y > 0 && blockAccess.GetBlock(pos1) == forBlock)
+      //  return this.HasSupportDown(forBlock, blockAccess, pos1);
       return false;
     }
 

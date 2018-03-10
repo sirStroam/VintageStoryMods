@@ -1,6 +1,6 @@
 {
 	code: "ropeladder",
-	//behaviors: [{name: "RotateBehavior"}],
+	behaviors: [{name: "RopeLadder"}],
 	variantgroups: [
 		{ loadFromProperties: "abstract/horizontalorientation" }
 	],
@@ -14,7 +14,10 @@
 	},
 	blockmaterial: "Plant",
 	drawtype: "json",
-	textures:{all:{base: "block/ropeladder"} },
+	textures:{
+		"ropewood": {base: "block/ropewood"},
+		"normal1": {base: "block/normal1"} 
+	},
 	replaceable: 500,
 	lightAbsorption: 0,
 	climbable: true,
