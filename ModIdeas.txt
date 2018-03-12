@@ -2,12 +2,17 @@
 texture pack for more visible ore.
 place items down on ground (sneak+righclick)
 Fuse trails with blasting powder
-poles that only react to other poles unlike fences.
+
 bamboo saplings
-rope recipe
+>rope recipe
 rope ladders
 vessel
 animal cages
+
+====Fixtures and Handrails====
+poles like immersive enginnering
+wall mounts like immersive enginnering
+hand rails that work diagnal and for stairs.
 
 ====Environment====
 branches and shrubs slow you down
@@ -20,7 +25,7 @@ rock pile
 adobe & mud bricks(each stone type)
 
 stairs inside outside corners
-reed and hay mat
+reed and hay matof course chisling 
 
 ====recipes====
 blue & fireclay shingles(block, slab, stairs)

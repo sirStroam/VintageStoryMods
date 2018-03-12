@@ -3,7 +3,7 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Server;
 
-namespace RopeLadder
+namespace ropeladder
 {
 	public class RopeLadder : ModBase
 	{

@@ -3,7 +3,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.MathTools;
 
-namespace TestMod
+namespace ropeladder
 {
 	public class BlockBehaviorRopeLadder : BlockBehavior
 	{
@@ -21,33 +21,22 @@ namespace TestMod
 		public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, IItemStack itemstack, BlockSelection blockSel, ref EnumHandling handling)
         {
           handling = EnumHandling.PreventDefault;
-          BlockPos position = blockSel.Position;
-          Block block1 = world.BlockAccessor.GetBlock(position);
-          //Block tempBlock = blockSel.DidOffset ? world.BlockAccessor.GetBlock(position.AddCopy(blockSel.Face.GetOpposite())) : block1;
-          //BlockPos blockPos = blockSel.DidOffset ? position.AddCopy(blockSel.Face.GetOpposite()) : blockSel.Position;
-
-            if (block1.IsReplacableBy(this.block))
+          if (!world.BlockAccessor.GetBlock(blockSel.Position).IsReplacableBy(this.block))
+            return false;
+          if (blockSel.Face.IsHorizontal && this.TryAttachTo(world, blockSel.Position, blockSel.Face))
+            return true;
+          if (blockSel.Face.Equals(BlockFacing.DOWN))
+          {
+            AssetLocation code1 = this.block.CodeWithParts(Block.SuggestedHVOrientation(byPlayer, blockSel)[0].Code);
+            Block block = world.BlockAccessor.GetBlock(code1);
+            //block.DoPlaceBlock(world, blockSel.Position, blockSel.Face);
+            //return true;
+            if(this.HasSupportUp(block, world.BlockAccessor, blockSel.Position))
             {
-                AssetLocation code1 = this.block.CodeWithParts(Block.SuggestedHVOrientation(byPlayer, blockSel)[0].Code);
-                Block block3 = world.BlockAccessor.GetBlock(code1);
-
-                //BlockPos pos2 = blockPos.DownCopy(1);
-                //while(world.BlockAccessor.GetBlock(pos2).FirstCodePart(0) == this.ownFirstCodePart)
-                //{pos2 = pos2.DownCopy(1);} //shuffles down until below the chain
-                //Block block7 = world.BlockAccessor.GetBlock(pos2);
-                /*if (tempBlock.FirstCodePart(0) == this.ownFirstCodePart && block7.IsReplacableBy(this.block) && !CollisionTester.AabbIntersect(byPlayer.Entity.CollisionBox, byPlayer.Entity.Pos.X, byPlayer.Entity.Pos.Y, byPlayer.Entity.Pos.Z, Cuboidf.Default(), new Vec3d((double)pos2.X, (double)pos2.Y, (double)pos2.Z)))
-                { //adds to the chain
-                    tempBlock.DoPlaceBlock(world, pos2, blockSel.Face);
-                    return true;
-                }*/
-                if (this.HasSupport(block3, world.BlockAccessor, position)) 
-                { //starts new chain
-                    block3.DoPlaceBlock(world, position, blockSel.Face);
-                    return true;
-                }
-
+              block.DoPlaceBlock(world, blockSel.Position, blockSel.Face);
+              return true;
             }
-          
+          }
           return false;
     }
 
@@ -62,7 +51,8 @@ namespace TestMod
       BlockPos blockPos = blockSel.DidOffset ? position.AddCopy(blockSel.Face.GetOpposite()) : blockSel.Position;
       if(!sneak)
       {
-        if(this.GetNextRopeLadder(byPlayer.Entity) == null) return false;
+        IItemSlot slot = this.GetNextRopeLadder(byPlayer.Entity);
+        if(slot == null) return false;
         
           AssetLocation code1 = this.block.CodeWithParts(Block.SuggestedHVOrientation(byPlayer, blockSel)[0].Code);
           Block block3 = world.BlockAccessor.GetBlock(code1);
@@ -73,17 +63,14 @@ namespace TestMod
           Block block7 = world.BlockAccessor.GetBlock(pos2);
           if (tempBlock.FirstCodePart(0) == this.ownFirstCodePart && block7.IsReplacableBy(this.block) && !CollisionTester.AabbIntersect(byPlayer.Entity.CollisionBox, byPlayer.Entity.Pos.X, byPlayer.Entity.Pos.Y, byPlayer.Entity.Pos.Z, Cuboidf.Default(), new Vec3d((double)pos2.X, (double)pos2.Y, (double)pos2.Z)))
           { //adds to the chain
+
             tempBlock.DoPlaceBlock(world, pos2, blockSel.Face);
+            slot.TakeOut(1);
             return true;
           }
-          /*if (this.HasSupport(block3, world.BlockAccessor, position)) 
-          { //starts new chain
-            block3.DoPlaceBlock(world, position, blockSel.Face);
-            return true;
-          }*/
 
         
-      } else //if(tempBlock.FirstCodePart(0) == this.ownFirstCodePart)
+      } else 
       {
         BlockPos pos2 = blockPos;
         BlockPos posNext = blockPos.DownCopy(1);
@@ -99,12 +86,21 @@ namespace TestMod
         ItemStack ladderstack = new ItemStack(world.BlockAccessor.GetBlock(this.block.CodeWithParts(this.dropBlockFace)), 1);
         ladderstack.StackSize = 1;
 
-            //world.SpawnItemEntity( ladderstack, byPlayer.WorldData.EntityPlayer.LocalPos.XYZ);//, byPlayer.WorldData.EntityPlayer.Pos.Motion); 
         return byPlayer.InventoryManager.TryGiveItemstack(ladderstack);
 
       }
       return false;
 
+    }
+
+    private bool TryAttachTo(IWorldAccessor world, BlockPos blockpos, BlockFacing onBlockFace)
+    {
+      BlockFacing opposite = onBlockFace.GetOpposite();
+      BlockPos pos = blockpos.AddCopy(opposite);
+      if (!world.BlockAccessor.GetBlock((int) world.BlockAccessor.GetBlockId(pos)).CanAttachBlockAt(world.BlockAccessor, this.block, pos, onBlockFace))
+        return false;
+      world.BlockAccessor.GetBlock(this.block.CodeWithParts(opposite.Code)).DoPlaceBlock(world, blockpos, onBlockFace);
+      return true;
     }
 
     private IItemSlot GetNextRopeLadder(IEntityAgent byEntity)
@@ -117,7 +113,6 @@ namespace TestMod
         slot = invslot;
         return false;
       }));
-      slot.Itemstack.StackSize--;
       return slot;
     }
 
@@ -160,10 +155,9 @@ namespace TestMod
       BlockFacing facing = BlockFacing.FromCode(forBlock.LastCodePart(0));
       BlockPos pos1 = pos.DownCopy(1);
       BlockPos pos2 = pos.UpCopy(1);
-      if (this.SideSolid(blockAccess, pos, facing) /*|| this.SideSolid(blockAccess, pos1, BlockFacing.DOWN)*/ || this.SideSolid(blockAccess, pos2, BlockFacing.UP) || pos.Y < blockAccess.MapSizeY - 1 && blockAccess.GetBlock(pos2) == forBlock && this.HasSupportUp(forBlock, blockAccess, pos2))
+      if (this.SideSolid(blockAccess, pos, facing)  || this.SideSolid(blockAccess, pos2, BlockFacing.UP) || pos.Y < blockAccess.MapSizeY - 1 && blockAccess.GetBlock(pos2) == forBlock && this.HasSupportUp(forBlock, blockAccess, pos2))
         return true;
-      //if (pos.Y > 0 && blockAccess.GetBlock(pos1) == forBlock)
-      //  return this.HasSupportDown(forBlock, blockAccess, pos1);
+
       return false;
     }
 

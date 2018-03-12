@@ -28,7 +28,7 @@ namespace TestMod
         
 		public override void Start(ICoreAPI api)
 		{
-			api.RegisterBlockBehaviorClass(BlockBehaviorRopeLadder.NAME, typeof(BlockBehaviorRopeLadder));
+			//api.RegisterBlockBehaviorClass(BlockBehaviorRopeLadder.NAME, typeof(BlockBehaviorRopeLadder));
 			//api.RegisterBlockBehaviorClass("RotateBehavior", typeof(RotateBehavior));
 			base.Start(api);
 			INSTANCE = this;
