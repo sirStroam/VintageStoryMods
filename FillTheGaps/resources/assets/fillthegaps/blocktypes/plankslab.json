@@ -1,47 +1,81 @@
 {
 	code: "plankslab",
-	class: "BlockSlab",
-	replaceable: 200,
-	variantgroups: [
-		{ code: "type", states: ["bamboo"] },
-		{ code: "part", states: ["down", "up"] }
+	behaviors: [
+		{
+			name: "OmniRotatable",
+			properties: {
+				"rotateSides": true,
+				"facing": "block"
+			}
+		}
 	],
-	blockmaterial: "Wood",
+	variantgroups: [
+		{ code:"type", states: ["bamboo"] },
+		{ code: "rot", states: ["north", "east", "south", "west", "up", "down"] }
+	],
 	creativeinventory: { "general": ["*-down"], "construction": ["*-down"] },
-	shapeByType: {
-		"*-down" : { base: "game:block/basic/slab" },
-		"*-up" : { base: "game:block/basic/slab-up" },
-	},
+	drops: [{ code: "plankslab-{type}-down" }],
+	shape: { base: "game:block/basic/slab-{rot}"},
 	sidesolidByType: {
-		"*-down": { all: false, down: true },
+		"*-north": { all: false, south: true },
+		"*-east": { all: false, west: true },
+		"*-south": { all: false, north: true },
+		"*-west": { all: false, east: true },
 		"*-up": { all: false, up: true },
+		"*-down": { all: false, down: true },
 	},
 	sideopaqueByType: {
-		"*-down": { all: false, down: true },
+		"*-north": { all: false, north: true },
+		"*-east": { all: false, east: true },
+		"*-south": { all: false, south: true },
+		"*-west": { all: false, west: true },
 		"*-up": { all: false, up: true },
+		"*-down": { all: false, down: true },
 	},
-	sideAo: {
-		all:false,
+	sideAoByType: {
+		"*-up": { all: false, up: true },
+		"*-down": { all: false, down: true },
+		"*": { all: false }
 	},
+	blockmaterial: "Wood",
+	replaceable: 200,
+	resistance: 2.75,
+	lightAbsorption: 99,
 	textures: {
-        horizontals: { base: "game:block/wood/planks/{type}-side" },
+		horizontals: { base: "game:block/wood/planks/{type}-side" },
 		verticals: { base: "game:block/wood/planks/{type}-top" },
 	},
-	collisionboxByType: {
-		"*-down": { x1: 0, y1: 0, z1: 0,   x2: 1, y2: 0.5, z2: 1 },
-		"*-up": { x1: 0, y1: 0.5, z1: 0,   x2: 1, y2: 1, z2: 1 }
-	},
-	selectionboxByType: {
-		"*-down": { x1: 0, y1: 0, z1: 0,   x2: 1, y2: 0.5, z2: 1 },
-		"*-up": { x1: 0, y1: 0.5, z1: 0,   x2: 1, y2: 1, z2: 1 }
-	},
 	sounds: {
-        "place": "game:block/planks",
+		"place": "game:block/planks",
 		"walk": "game:walk/wood"
+	},
+	collisionbox: { x1: 0, y1: 0, z1: 0,   x2: 1, y2: 0.5, z2: 1,
+		rotateXByType: {
+			"*-north": 90,
+			"*-south": 270,
+			"*-up": 180,
+			"*-down": 0,
+		},
+		rotateZByType: {
+			"*-east": 90,
+			"*-west": 270,
+		},
+	},
+	selectionbox: { x1: 0, y1: 0, z1: 0,   x2: 1, y2: 0.5, z2: 1,
+		rotateXByType: {
+			"*-north": 90,
+			"*-south": 270,
+			"*-up": 180,
+			"*-down": 0,
+		},
+		rotateZByType: {
+			"*-east": 90,
+			"*-west": 270,
+		},
 	},
 	combustibleProps: {
 		burnTemperature: 800,
-		burnDuration: 24,
+		burnDuration: 12,
 	},
 	materialDensity: 400,
 	guiTransform: {

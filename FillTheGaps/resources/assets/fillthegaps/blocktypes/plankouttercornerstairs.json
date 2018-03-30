@@ -2,11 +2,11 @@
 	code: "plankouttercornerstairs",
 	class: "BlockStairs",
 	variantgroups: [
-		{ loadFromProperties: "game:block/woodwithaged" },
+		{ code: "wood", states: ["aged"], loadFromProperties: "block/wood" },
 		{ loadFromProperties: "game:abstract/verticalorientation" },
 		{ loadFromProperties: "game:abstract/horizontalorientation" }
 	],
-	creativeinventory: { "general": ["plankouttercornerstairs-{woodwithaged}-up-north"], "construction": ["plankouttercornerstairs-{woodwithaged}-up-north"] },
+	creativeinventory: { "general": ["plankouttercornerstairs-{wood}-up-north"], "construction": ["plankouttercornerstairs-{wood}-up-north"] },
 	sidesolidByType: {	
 		"*-up-north": { all:false, down:true },
 		"*-up-west": { all:false, down:true },
@@ -40,7 +40,7 @@
 	blockmaterial: "Wood",
 	drawtype: "json",
 	textures: {
-		all: { base: "game:block/wood/planks/{woodwithaged}1" },
+		all: { base: "game:block/wood/planks/{wood}1" },
 	},
 	lightAbsorption: 99,
 	resistance: 3,
@@ -50,7 +50,33 @@
 	},
 	combustibleProps: {
 		burnTemperature: 800,
-		burnDuration: 10,
+		burnDuration: 8,
 	},
-	materialDensity: 600
+	materialDensity: 600,
+	collisionSelectionBoxesByType: {
+		"*-down-*": [
+			{ x1: 0, y1: 0.5, z1: 0, x2: 1, y2: 1, z2: 1 },
+			{ x1: 0, y1: 0, z1: 0.5, x2: 0.5, y2: 0.5, z2: 1,
+				rotateYByType: {
+					"*-north": 180,
+					"*-east": 90,
+					"*-south": 0,
+					"*-west": 270,
+				}
+				
+			}			
+		],
+		"*-up-*": [
+			{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.5, z2: 1 },
+			{ 
+				x1: 0.5, y1: 0.5, z1: 0.5, x2: 1, y2: 1, z2: 1, 
+				rotateYByType: {
+					"*-north": 180,
+					"*-east": 90,
+					"*-south": 0,
+					"*-west": 270,
+				}
+			}
+		],	
+	}
 }

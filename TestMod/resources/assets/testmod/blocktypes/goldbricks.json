@@ -1,5 +1,6 @@
 {
 	code: "goldbricks",
+	enabled: false,
 	creativeinventory: { "general": ["*"] },
 	shape: { base: "game:block/basic/cube" },
 	blockmaterial: "Stone",

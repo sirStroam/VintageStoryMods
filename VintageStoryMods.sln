@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMod", "TestMod\TestMod.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillTheGaps", "FillTheGaps\FillTheGaps.csproj", "{70988862-E8EF-43C7-BFFE-901A12FDDBF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RopeLadder", "RopeLadder\RopeLadder.csproj", "{0EC88E1C-D201-46F9-AD6D-BEC001BE210F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimitiveConstruction", "PrimitiveConstruction\PrimitiveConstruction.csproj", "{2DAFF6F5-A4C3-4F71-A2B4-061AA00032F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LampPosts", "LampPosts\LampPosts.csproj", "{A7AC5807-A869-4E04-88A0-081B5968E0F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,5 +72,17 @@ Global
 		{2DAFF6F5-A4C3-4F71-A2B4-061AA00032F1}.Release|x64.Build.0 = Release|x64
 		{2DAFF6F5-A4C3-4F71-A2B4-061AA00032F1}.Release|x86.ActiveCfg = Release|x86
 		{2DAFF6F5-A4C3-4F71-A2B4-061AA00032F1}.Release|x86.Build.0 = Release|x86
+		{A7AC5807-A869-4E04-88A0-081B5968E0F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7AC5807-A869-4E04-88A0-081B5968E0F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7AC5807-A869-4E04-88A0-081B5968E0F6}.Debug|x64.ActiveCfg = Debug|x64
+		{A7AC5807-A869-4E04-88A0-081B5968E0F6}.Debug|x64.Build.0 = Debug|x64
+		{A7AC5807-A869-4E04-88A0-081B5968E0F6}.Debug|x86.ActiveCfg = Debug|x86
+		{A7AC5807-A869-4E04-88A0-081B5968E0F6}.Debug|x86.Build.0 = Debug|x86
+		{A7AC5807-A869-4E04-88A0-081B5968E0F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7AC5807-A869-4E04-88A0-081B5968E0F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7AC5807-A869-4E04-88A0-081B5968E0F6}.Release|x64.ActiveCfg = Release|x64
+		{A7AC5807-A869-4E04-88A0-081B5968E0F6}.Release|x64.Build.0 = Release|x64
+		{A7AC5807-A869-4E04-88A0-081B5968E0F6}.Release|x86.ActiveCfg = Release|x86
+		{A7AC5807-A869-4E04-88A0-081B5968E0F6}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal

@@ -1,9 +1,9 @@
 
 {
-	"type": "content",
+	"type": "code",
 	"name": "Primitive Construction",
 	"description" : "Adding primitive construction blocks",
 	"author": "Stroam",
-	"version": "0.1.0",
-	"gameversions": [ "1.5.1.2+" ]
+	"version": "0.1.1",
+	"gameversions": [ "1.5.1.6+" ]
 }

@@ -1,9 +1,0 @@
-
-{
-	"type": "code",
-	"name": "Rope Ladder",
-	"description" : "Adds a rope ladder",
-	"author": "Stroam",
-	"version": "0.1.0",
-	"gameversions": [ "1.5.1.6+" ]
-}

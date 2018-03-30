@@ -1,0 +1,11 @@
+D:\Github repositories\VintageStoryMods\LampPosts\bin\Release\net452\LampPosts.dll
+D:\Github repositories\VintageStoryMods\LampPosts\bin\Release\net452\LampPosts.pdb
+D:\Github repositories\VintageStoryMods\LampPosts\bin\Release\net452\VintagestoryAPI.dll
+D:\Github repositories\VintageStoryMods\LampPosts\bin\Release\net452\VSSurvivalMod.dll
+D:\Github repositories\VintageStoryMods\LampPosts\bin\Release\net452\VSCreativeMod.dll
+D:\Github repositories\VintageStoryMods\LampPosts\bin\Release\net452\VintagestoryAPI.xml
+D:\Github repositories\VintageStoryMods\LampPosts\obj\Release\net452\LampPosts.csproj.CoreCompileInputs.cache
+D:\Github repositories\VintageStoryMods\LampPosts\obj\Release\net452\LampPosts.AssemblyInfoInputs.cache
+D:\Github repositories\VintageStoryMods\LampPosts\obj\Release\net452\LampPosts.AssemblyInfo.cs
+D:\Github repositories\VintageStoryMods\LampPosts\obj\Release\net452\LampPosts.dll
+D:\Github repositories\VintageStoryMods\LampPosts\obj\Release\net452\LampPosts.pdb

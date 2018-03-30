@@ -10,6 +10,7 @@ namespace primitiveconstruction
 		public static primitiveconstruction INSTANCE { get; private set; }
 		
 		public static ModInfo MOD_INFO { get; } = new ModInfo {
+			Type		= EnumModType.Content,
 			Name        = "Primitive Construction",
 			Description = "Adds Primitive Construction Blocks",
 			Author      = "Stroam",

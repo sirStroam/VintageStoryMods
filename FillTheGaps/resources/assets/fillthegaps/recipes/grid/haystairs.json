@@ -1,5 +1,5 @@
 {
-	ingredientPattern: "_GG	GGG",
+	ingredientPattern: "_GG,GGG",
 	ingredients: {
 		"G": { type: "item", code: "game:drygrass" }
 	},

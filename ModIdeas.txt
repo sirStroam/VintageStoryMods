@@ -1,11 +1,10 @@
 
 texture pack for more visible ore.
 place items down on ground (sneak+righclick)
-Fuse trails with blasting powder
+->Fuse trails with blasting powder
+->ladders+
 
 bamboo saplings
->rope recipe
-rope ladders
 vessel
 animal cages
 
@@ -13,6 +12,7 @@ animal cages
 poles like immersive enginnering
 wall mounts like immersive enginnering
 hand rails that work diagnal and for stairs.
+fences that work for half slabs and diagnol
 
 ====Environment====
 branches and shrubs slow you down
@@ -21,11 +21,11 @@ TFC style sand and dirt
 ====Blocks===
 wood pile
 rock pile
-
 adobe & mud bricks(each stone type)
-
-stairs inside outside corners
 reed and hay matof course chisling 
+
+===Roads===
+dirt, grass, flagstone, round, brick
 
 ====recipes====
 blue & fireclay shingles(block, slab, stairs)
@@ -130,13 +130,20 @@ hanging planters
 
 
 ===Purposeful creatures===
+revered - 
 fire hack-black kite- Spawns in grassland during clear skies, by unattended lit firepits with all surround blocks able to see sky. Grabs fire from the firepit to light nearby grass lands on fire. 
 
 dog training.
 
 
 
-=========next content update
-Chandelier block, Lantern update as showcased, tallow cooking system for candles and candle as block, maybe a new, super creepy underground creature, maybe finally lore pieces loot, perhaps bees and beekeeping in a super basic version
 
 
+
+private static ModInfo modInfo { get; } = new ModInfo {
+    Name = "Client+",
+    Description = "A small set of client-only commands and chat macros.",
+    Author = "Milo Christiansen",
+    Version = "0.4.0",
+};
+public override ModInfo GetModInfo() => modInfo;

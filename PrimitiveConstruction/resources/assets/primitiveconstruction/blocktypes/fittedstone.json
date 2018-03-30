@@ -7,7 +7,8 @@
 	replaceable: 400,
 	resistance: 1.5,
 	textures: {
-        all: { 
+		verticals: {base: "block/fittedstone/fittedstonetop"},
+        horizontals: { 
             base: "block/fittedstone/fittedstone1",
             alternates: [{base: "block/fittedstone/fittedstone2" }, {base: "block/fittedstone/fittedstone3" }, {base: "block/fittedstone/fittedstone4" }, {base: "block/fittedstone/fittedstone5" }], 
         },

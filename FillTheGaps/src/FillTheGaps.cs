@@ -10,6 +10,7 @@ namespace FillTheGaps
 		public static FillTheGaps INSTANCE { get; private set; }
 		
 		public static ModInfo MOD_INFO { get; } = new ModInfo {
+			Type		= EnumModType.Code,
 			Name        = "FillTheGaps",
 			Description = "Adds Quick Content",
 			Author      = "Stroam",
@@ -20,18 +21,9 @@ namespace FillTheGaps
 		
 		public override void Start(ICoreAPI api)
 		{
+			//api.RegisterBlockBehaviorClass(RotateBehavior.NAME, typeof(RotateBehavior));
 			base.Start(api);
 			INSTANCE = this;
-		}
-		
-		public override void StartServerSide(ICoreServerAPI api)
-		{
-			
-		}
-		
-		public override void StartClientSide(ICoreClientAPI api)
-		{
-			
 		}
 	}
 }

@@ -1,0 +1,26 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "flat",
+			"from": [ 0.0, 0.0, 0.0 ], 
+			"to": [ 16.0, -16.0, 0.0 ], 
+			"rotationOrigin": [ 0.0, 0.0, 0.0 ],
+			"rotationX": -90.0,
+			"faces": {
+				"north": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, -16.0 ], "enabled": false },
+				"east": { "texture": "#null", "uv": [ 0.0, 0.0, 0.0, -16.0 ], "enabled": false },
+				"south": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, -16.0 ] },
+				"west": { "texture": "#null", "uv": [ 0.0, 0.0, 0.0, -16.0 ], "enabled": false },
+				"up": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 0.0 ], "enabled": false },
+				"down": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 0.0 ], "enabled": false }
+			}
+		}
+	]}

@@ -1,5 +1,5 @@
 {
-	ingredientPattern: "R	S	B",
+	ingredientPattern: "R,S,B",
 	ingredients: {
 		"R": { type: "item", code: "game:stone-*", quantity: 9 },
 		"S": { type: "block", code: "game:sand-*" },
