@@ -4,11 +4,11 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Server;
 
-namespace TestMod
+namespace LampPosts
 {
-	public class TestMod : ModBase
+	public class LampPosts : ModBase
 	{
-		public static TestMod INSTANCE { get; private set; }
+		public static LampPosts INSTANCE { get; private set; }
 		
 		public static ModInfo MOD_INFO { get; } = new ModInfo {
 			Type		= EnumModType.Code,

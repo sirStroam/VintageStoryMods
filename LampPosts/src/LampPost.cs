@@ -211,20 +211,7 @@ namespace LampPost {
 			return true;
 		}
 
-		private static Regex dirRe = new Regex(@".*-(?<dir>north|south|east|west)(?:-.*)?");
-		public override void OnNeighourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos, ref EnumHandling handling) {
-			if (!flipable) {
-				var m = dirRe.Match(block.Code.Path);
-				var dir = "north";
-				var len = "short";
-				if (m.Success) {
-					dir = m.Result("${dir}");
-					len = getCode(world, pos, dir);
-				}
-
-				world.BlockAccessor.ExchangeBlock(world.BlockAccessor.GetBlock(block.CodeWithParts(dir, len)).BlockId, pos);
-			}
-		}
+		
 
 		private string getCode(IWorldAccessor world, BlockPos pos, string dir) {
 			bool solid;

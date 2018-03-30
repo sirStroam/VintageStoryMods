@@ -1,6 +1,6 @@
 {
 	code: "wickerfence",
-	behaviours: [{ name: "wall" }],
+	behaviors: [{name: "WallBehavior"}],
 	variantgroups: [
 		{ code: "type", states: ["empty", "n", "e", "s", "w", "ne", "ns", "nw", "es", "ew", "sw", "nes", "new", "nsw", "esw", "nesw"] }
 	],

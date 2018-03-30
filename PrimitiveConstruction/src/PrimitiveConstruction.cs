@@ -10,7 +10,7 @@ namespace primitiveconstruction
 		public static primitiveconstruction INSTANCE { get; private set; }
 		
 		public static ModInfo MOD_INFO { get; } = new ModInfo {
-			Type		= EnumModType.Content,
+			Type		= EnumModType.Code,
 			Name        = "Primitive Construction",
 			Description = "Adds Primitive Construction Blocks",
 			Author      = "Stroam",
@@ -24,7 +24,7 @@ namespace primitiveconstruction
 			base.Start(api);
 			INSTANCE = this;
 		}
-		
+		/* 
 		public override void StartServerSide(ICoreServerAPI api)
 		{
 			
@@ -33,6 +33,6 @@ namespace primitiveconstruction
 		public override void StartClientSide(ICoreClientAPI api)
 		{
 			
-		}
+		}*/
 	}
 }
