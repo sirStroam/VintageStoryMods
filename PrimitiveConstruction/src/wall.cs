@@ -27,8 +27,11 @@ namespace PrimitiveConstruction {
 
 	// Used for the post, should change shape based on side connections.
 	class WallBehavior : BlockBehavior {
+
+    Block refBlock;
 		public WallBehavior(Block block) : base(block) {
-		
+      refBlock = this.block;
+		}
 
 		public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref EnumHandling handling) {
 			handling = EnumHandling.PreventDefault;
@@ -67,19 +70,27 @@ namespace PrimitiveConstruction {
     public bool ShouldConnectAt(IWorldAccessor world, BlockPos ownPos, BlockFacing side)
     {
       Block block = world.BlockAccessor.GetBlock(ownPos.AddCopy(side));
-      Block B1 = world.BlockAccessor.GetBlock(ownPos);
+      Block B1 = refBlock;
+
+      String s1 = block.FirstCodePart();
+      String s2 = B1.Code.FirstPathPart();
       
       if (block.BlockId != null){//test same base block 
-        if (this.Code.Path.FirstCodePart() == block.FirstCodePart())
+        if (refBlock.FirstCodePart() == block.FirstCodePart())
           return true;
       }
       return (bool) block.SideSolid[side.GetOpposite().Index]; //test if neighbor face is solid
     }
 
+    public override ItemStack[] GetDrops(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1f)
+        {
+            Block block = world.BlockAccessor.GetBlock(CodeWithParts("ew"));
+            return new ItemStack[] { new ItemStack(block) };
+        }
+
 		public override ItemStack OnPickBlock(IWorldAccessor world, BlockPos pos, ref EnumHandling handling) {
 			return new ItemStack(world.BlockAccessor.GetBlock(block.CodeWithParts("empty")));
 		}
-    }
 
 	}
 

@@ -1,5 +1,6 @@
 {
-    code: "gate",
+	code: "gate",
+	behaviors: [{name: "rotateninety"}],
     variantgroups: [
 		{ code: "type", states: ["n", "w"] }
     ],

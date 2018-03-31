@@ -37,7 +37,7 @@
 	textures: {
         "wicker1": { 
             base: "block/wicker/wicker1",
-            alternates: [{base: "block/wicker/wicker2" }], 
+            //alternates: [{base: "block/wicker/wicker2" }], 
 		},
 		"wood": {base: "block/wicker/wood"}
 	},
