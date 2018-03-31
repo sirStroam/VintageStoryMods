@@ -1,7 +1,8 @@
 {
 	"block-adobe": "Adobe",
 	"block-cob": "Cob",
-	"block-wicker": "Wicker",
+	"block-wickerfence-*": "Wicker fence",
+	"block-gate-*": "Fence gap",
 	"block-fittedstone": "Stacked Stone",
 	"block-rammedearth-light": "Light Rammed Earth",
 	"block-rammedearth-medium": "Brownish Rammed Earth",

@@ -7,7 +7,6 @@ namespace primitiveconstruction
 {
 	public class primitiveconstruction : ModBase
 	{
-		public static primitiveconstruction INSTANCE { get; private set; }
 		
 		public static ModInfo MOD_INFO { get; } = new ModInfo {
 			Type		= EnumModType.Code,
@@ -16,23 +15,14 @@ namespace primitiveconstruction
 			Author      = "Stroam",
 		};
 		
-		
 		public override ModInfo GetModInfo() { return MOD_INFO; }
 		
 		public override void Start(ICoreAPI api)
 		{
+			
 			base.Start(api);
-			INSTANCE = this;
+			api.RegisterBlockBehaviorClass("rotateninety", typeof(rotateninety));
+			api.RegisterBlockBehaviorClass("WallBehavior", typeof(WallBehavior));
 		}
-		/* 
-		public override void StartServerSide(ICoreServerAPI api)
-		{
-			
-		}
-		
-		public override void StartClientSide(ICoreClientAPI api)
-		{
-			
-		}*/
 	}
 }

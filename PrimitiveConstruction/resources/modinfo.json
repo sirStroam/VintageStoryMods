@@ -4,6 +4,6 @@
 	"name": "Primitive Construction",
 	"description" : "Adding primitive construction blocks",
 	"author": "Stroam",
-	"version": "0.1.1",
-	"gameversions": [ "1.5.1.6+" ]
+	"version": "2.0",
+	"gameversions": [ "1.5.2.6+" ]
 }

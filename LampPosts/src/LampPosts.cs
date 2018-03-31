@@ -8,7 +8,6 @@ namespace LampPosts
 {
 	public class LampPosts : ModBase
 	{
-		public static LampPosts INSTANCE { get; private set; }
 		
 		public static ModInfo MOD_INFO { get; } = new ModInfo {
 			Type		= EnumModType.Code,
@@ -28,10 +27,9 @@ namespace LampPosts
         
 		public override void Start(ICoreAPI api)
 		{
-			//api.RegisterBlockBehaviorClass(BlockBehaviorRopeLadder.NAME, typeof(BlockBehaviorRopeLadder));
-			//api.RegisterBlockBehaviorClass("RotateBehavior", typeof(RotateBehavior));
+			api.RegisterBlockBehaviorClass("LampConnectorBehavior", typeof(LampConnectorBehavior));
+			api.RegisterBlockBehaviorClass("LampPostBehavior", typeof(LampPostBehavior));
 			base.Start(api);
-			INSTANCE = this;
 		}
 	}
 }
