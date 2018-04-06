@@ -1,7 +1,7 @@
 {
 	ingredientPattern: "WG,DS",
 	ingredients: {
-		"W": { type: "block", code: "wicker", quantity: 3 },
+		"W": { type: "block", code: "wickerfence-ew", quantity: 3 },
         	"S": { type: "block", code: "game:sand-*" },
         	"G": { type: "item", code: "game:drygrass" },
         	"D": { type: "block", code: "game:soil-*-none" }

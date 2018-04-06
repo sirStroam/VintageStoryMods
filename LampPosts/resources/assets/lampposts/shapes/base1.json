@@ -6,9 +6,6 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textures": {
-		"sides": "C:/Users/Public/Music/Sample Music/musics/zzz/posts/sides",
-		"top1": "C:/Users/Public/Music/Sample Music/musics/zzz/posts/top1",
-		"top2": "C:/Users/Public/Music/Sample Music/musics/zzz/posts/top2"
 	},
 	"elements": [
 		{

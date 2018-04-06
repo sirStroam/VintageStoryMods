@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "C,Q",
+	ingredients: {
+		"Q": { type: "block", code: "game:quartz-plain" },
+		"C": { type: "item", code: "stonechisel*" }
+	},
+	width: 1,
+	height: 2,
+	output: { type: "block", code: "game:quartz-plain" }
+}

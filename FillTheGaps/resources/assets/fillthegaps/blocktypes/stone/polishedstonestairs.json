@@ -1,12 +1,12 @@
 {
-	code: "stonestairs",
+	code: "polishedstonestairs",
 	class: "BlockStairs",
 	variantgroups: [
 		{ loadFromProperties: "block/rock" },
 		{ loadFromProperties: "abstract/verticalorientation" },
 		{ loadFromProperties: "abstract/horizontalorientation" }
 	],
-	creativeinventory: { "general": ["stonestairs-{rock}-up-north"], "construction": ["stonestairs-{rock}-up-north"] },
+	creativeinventory: { "general": ["polishedstonestairs-{rock}-up-north"], "construction": ["polishedstonestairs-{rock}-up-north"], "fillthegaps": ["polishedstonestairs-{rock}-up-north"] },
 	sidesolidByType: {	
 		"*-up-north": { all:false, down:true, north: true },
 		"*-up-west": { all:false, down:true, west: true },
@@ -39,20 +39,13 @@
 	},
 	blockmaterial: "Stone",
 	textures: {
-		all: { base: "game:block/stone/rock/{rock}" },
+		all: {base: "game:block/stone/rockpolished/{rock}" },
 	},
 	replaceable: 160,
 	resistance: 3,
 	sounds: {
 		"walk": "game:walk/stone"
-    },
-    drops: [
-		{
-			type: "item", 
-			code: "game:stone-{rock}", 
-			quantity: { avg: 2.5, var: 0.5 } 
-		},
-	],
+	},
 	collisionSelectionBoxesByType: {
 		"*-down-*": [
 			{ x1: 0, y1: 0.5, z1: 0, x2: 1, y2: 1, z2: 1 },

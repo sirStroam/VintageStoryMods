@@ -6,7 +6,6 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textures": {
-		"wood": "D:/Github repositories/VintageStoryMods/PrimitiveConstruction/resources/assets/primitiveconstruction/textures/block/wicker/wood"
 	},
 	"elements": [
 		{

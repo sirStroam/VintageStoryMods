@@ -13,7 +13,7 @@
 		{ code:"type", states: ["normal", "bamboo"] },
 		{ code: "rot", states: ["north", "east", "south", "west", "up", "down"] }
 	],
-	creativeinventory: { "general": ["*-down"], "construction": ["*-down"] },
+	creativeinventory: { "general": ["*-down"], "construction": ["*-down"], "fillthegaps": ["*-down"] },
 	drops: [{ code: "hayslab-{type}-down" }],
 	shape: { base: "game:block/basic/slab-{rot}"},
 	sidesolidByType: {

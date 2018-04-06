@@ -6,7 +6,7 @@
 		{ loadFromProperties: "abstract/verticalorientation" },
 		{ loadFromProperties: "abstract/horizontalorientation" }
 	],
-	creativeinventory: { "general": ["plankinnercornerstairs-{wood}-up-north"], "construction": ["plankinnercornerstairs-{wood}-up-north"] },
+	creativeinventory: { "general": ["plankinnercornerstairs-{wood}-up-north"], "construction": ["plankinnercornerstairs-{wood}-up-north"], "fillthegaps": ["plankinnercornerstairs-{wood}-up-north"] },
 	sidesolidByType: {	
 		"*-up-north": { all:false, down:true, north: true, west: true },
 		"*-up-west": { all:false, down:true, west: true, south: true },

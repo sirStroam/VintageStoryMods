@@ -7,7 +7,6 @@ namespace FillTheGaps
 {
 	public class FillTheGaps : ModBase
 	{
-		public static FillTheGaps INSTANCE { get; private set; }
 		
 		public static ModInfo MOD_INFO { get; } = new ModInfo {
 			Type		= EnumModType.Code,
@@ -21,9 +20,10 @@ namespace FillTheGaps
 		
 		public override void Start(ICoreAPI api)
 		{
-			//api.RegisterBlockBehaviorClass(RotateBehavior.NAME, typeof(RotateBehavior));
+			api.RegisterBlockBehaviorClass("StonePathBehavior", typeof(StonePathBehavior));
+			api.RegisterBlockBehaviorClass("LevigatorBehavior", typeof(LevigatorBehavior));
 			base.Start(api);
-			INSTANCE = this;
+
 		}
 	}
 }

@@ -1,0 +1,49 @@
+{
+	code: "stonechisel",
+	variantgroups: [
+		{ code: "material", states: ["granite", "andesite", "basalt", "obsidian", "flint" ] },
+	],
+	maxstacksize: 1,
+	shape: { base: "item/tool/stonechisel" },
+	textures: {
+		all: { base: "game:item/tool/material/{material}" }
+	},
+	durabilitybytype: {
+		"stonechisel-granite": 35,
+		"stonechisel-andesite": 35,
+		"stonechisel-basalt": 35,
+		"stonechisel-obsidian": 70,
+		
+		"stonechisel-flint": 60,
+	},
+	attackpowerbytype: {
+		"stonechisel-granite": 0.75,
+		"stonechisel-andesite": 0.75,
+		"stonechisel-basalt": 0.75,
+		"stonechisel-obsidian": 1.5,
+		
+		"stonechisel-flint": 1,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "fillthegaps": ["*"] },
+	fpHandTransform: {
+		translation: { x: -0.1, y: 0.2, z: 0.4 },
+		rotation: { x: -20, y: -93, z: -75 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: -1, z: 0 },
+		rotation: { x: -157, y: 180, z: -46 },
+		origin: { x: 0.59, y: 0.535, z: 0.5 },
+		scale: 2.7
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.78, y: -0.44, z: -0.5 },
+		rotation: { x: 0, y: 180, z: -10 },
+		scale: 1
+	}
+}

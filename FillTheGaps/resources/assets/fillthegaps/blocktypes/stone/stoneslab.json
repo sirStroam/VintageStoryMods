@@ -1,5 +1,5 @@
 {
-	code: "plankslab",
+	code: "stoneslab",
 	behaviors: [
 		{
 			name: "OmniRotatable",
@@ -9,14 +9,15 @@
 			}
 		}
 	],
+	replaceable: 200,
 	variantgroups: [
-		{ code:"type", states: ["bamboo"] },
+		{ loadFromProperties: "block/rock" },
 		{ code: "rot", states: ["north", "east", "south", "west", "up", "down"] }
 	],
-	creativeinventory: { "general": ["*-down"], "construction": ["*-down"] },
-	drops: [{ code: "plankslab-{type}-down" }],
+	creativeinventory: { "general": ["*-down"], "construction": ["*-down"], "fillthegaps": ["*-down"] },
+	drops: [{ code: "stoneslab-{rock}-down" }],
 	shape: { base: "game:block/basic/slab-{rot}"},
-	sidesolidByType: {
+		sidesolidByType: {
 		"*-north": { all: false, south: true },
 		"*-east": { all: false, west: true },
 		"*-south": { all: false, north: true },
@@ -37,17 +38,8 @@
 		"*-down": { all: false, down: true },
 		"*": { all: false }
 	},
-	blockmaterial: "Wood",
-	replaceable: 200,
-	resistance: 2.75,
-	lightAbsorption: 99,
 	textures: {
-		horizontals: { base: "game:block/wood/planks/{type}-side" },
-		verticals: { base: "game:block/wood/planks/{type}-top" },
-	},
-	sounds: {
-		"place": "game:block/planks",
-		"walk": "game:walk/wood"
+		all: { base: "game:block/stone/rock/{rock}" },
 	},
 	collisionbox: { x1: 0, y1: 0, z1: 0,   x2: 1, y2: 0.5, z2: 1,
 		rotateXByType: {
@@ -73,11 +65,9 @@
 			"*-west": 270,
 		},
 	},
-	combustibleProps: {
-		burnTemperature: 800,
-		burnDuration: 12,
+	sounds: {
+		"walk": "game:walk/stone"
 	},
-	materialDensity: 400,
 	guiTransform: {
 		translation: { x: 0, y: 2, z: 0 },
 		origin: { x: 0.5, y: 0.25, z: 0.5 }

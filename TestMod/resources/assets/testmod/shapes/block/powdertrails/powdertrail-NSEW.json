@@ -6,7 +6,6 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textures": {
-		"powdertrail": "powdertrail"
 	},
 	"elements": [
 		{

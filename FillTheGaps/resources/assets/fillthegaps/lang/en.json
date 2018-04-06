@@ -1,4 +1,19 @@
 {
+	"game:tabname-fillthegaps": "Fill the Gaps",
+
+	"block-stonepath-*": "Stone path",
+
+	"item-stonechisel-*": "Stone chisel",
+	"item-woodenmallet": "Wooden mallet",
+	
+	"block-levigator-copper": "Copper levigator",
+	"block-levigator-tinbronze": "Tin bronze levigator",
+	"block-levigator-bismuthbronze": "Bismuth bronze levigator",
+	"block-levigator-blackbronze": "Black bronze levigator",
+	"block-levigator-gold": "Golden levigator",
+	"block-levigator-silver": "Silver levigator",
+	"block-levigator-iron": "Iron levigator",
+
 	"block-plankinnercornerstairs-aged-up-north": "Aged inner wooden stairs",
 	"block-plankinnercornerstairs-birch-up-north": "Birch inner stairs",
 	"block-plankinnercornerstairs-oak-up-north": "Oak inner stairs",
@@ -15,27 +30,29 @@
 	"block-plankouttercornerstairs-acacia-up-north": "Acacia outter stairs",
 	"block-plankouttercornerstairs-kapok-up-north": "Kapok outter stairs",
 
-	"block-claybrickslab-blue-down": "Blue clay bricks",
-	"block-claybrickslab-brown-down": "Brown clay bricks",
-	"block-claybrickslab-fire-down": "Fire clay bricks",
-	"block-claybrickslab-red-down": "Red clay bricks",
+	"block-claybrickslab-blue-down": "Blue clay brick slab",
+	"block-claybrickslab-brown-down": "Brown clay brick slab",
+	"block-claybrickslab-fire-down": "Fire clay brick slab",
+	"block-claybrickslab-red-down": "Red clay brick slab",
 
-	"block-claybrickstairs-blue-up-north": "Blue clay bricks",
-	"block-claybrickstairs-brown-up-north": "Brown clay bricks",
-	"block-claybrickstairs-fire-up-north": "Fire clay bricks",
-	"block-claybrickstairs-red-up-north": "Red clay bricks",
+	"block-claybrickstairs-blue-up-north": "Blue clay brick stairs",
+	"block-claybrickstairs-brown-up-north": "Brown clay brick stairs",
+	"block-claybrickstairs-fire-up-north": "Fire clay brick stairs",
+	"block-claybrickstairs-red-up-north": "Red clay brick stairs",
 
 	"block-hayslab-normal-down": "hay slab",
 	"block-haystairs-normal-up-north": "hay stairs",
 
+	"block-planks-bamboo-ud": "Bamboo planks",
 	"block-plankslab-bamboo-down": "bamboo slab",
 	
-	"block-polishedstonestairs-andesite-up-north": "Andesite stone stairs (Polished)",
-	"block-polishedstonestairs-chalk-up-north": "Chalk stone stairs (Polished)",
-	"block-polishedstonestairs-claystone-up-north": "Claystone stone stairs (Polished)",
-	"block-polishedstonestairs-granite-up-north": "Granite stone stairs (Polished)",
-	"block-polishedstonestairs-sandstone-up-north": "Sandstone stone stairs (Polished)",
-	"block-polishedstonestairs-shale-up-north": "Shale stone stairs (Polished)",
+	"block-polishedstonestairs-andesite-up-north": "Polished andesite stone stairs",
+	"block-polishedstonestairs-chalk-up-north": "Polished chalk stone stairs",
+	"block-polishedstonestairs-claystone-up-north": "Polished claystone stone stairs",
+	"block-polishedstonestairs-granite-up-north": "Polished granite stone stairs",
+	"block-polishedstonestairs-sandstone-up-north": "Polished sandstone stone stairs",
+	"block-polishedstonestairs-shale-up-north": "Polished shale stone stairs",
+	"block-polishedstonestairs-basalt-up-north": "Polished basalt stone stairs",
 
 	"block-stoneslab-andesite-down": "Andesite stone slab",
 	"block-stoneslab-chalk-down": "Chalk stone slab",
@@ -43,6 +60,7 @@
 	"block-stoneslab-granite-down": "Granite stone slab",
 	"block-stoneslab-sandstone-down": "Sandstone stone slab",
 	"block-stoneslab-shale-down": "Shale stone slab",
+	"block-stoneslab-basalt-down": "Basalt stone slab",
 
 	"block-stonestairs-andesite-up-north": "Andesite stone stairs",
 	"block-stonestairs-chalk-up-north": "Chalk stone stairs",
@@ -50,4 +68,5 @@
 	"block-stonestairs-granite-up-north": "Granite stone stairs",
 	"block-stonestairs-sandstone-up-north": "Sandstone stone stairs",
 	"block-stonestairs-shale-up-north": "Shale stone stairs",
+	"block-stonestairs-basalt-up-north": "Basalt stone stairs",
 }

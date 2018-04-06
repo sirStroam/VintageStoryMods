@@ -6,7 +6,7 @@
 		{ loadFromProperties: "game:abstract/verticalorientation" },
 		{ loadFromProperties: "game:abstract/horizontalorientation" }
 	],
-	creativeinventory: { "general": ["plankouttercornerstairs-{wood}-up-north"], "construction": ["plankouttercornerstairs-{wood}-up-north"] },
+	creativeinventory: { "general": ["plankouttercornerstairs-{wood}-up-north"], "construction": ["plankouttercornerstairs-{wood}-up-north"], "fillthegaps": ["plankouttercornerstairs-{wood}-up-north"] },
 	sidesolidByType: {	
 		"*-up-north": { all:false, down:true },
 		"*-up-west": { all:false, down:true },

@@ -6,7 +6,7 @@
 		{ loadFromProperties: "abstract/verticalorientation" },
 		{ loadFromProperties: "abstract/horizontalorientation" }
 	],
-	creativeinventory: { "general": ["haystairs-{type}-up-north"], "construction": ["haystairs-{type}-up-north"] },
+	creativeinventory: { "general": ["haystairs-{type}-up-north"], "construction": ["haystairs-{type}-up-north"], "fillthegaps": ["haystairs-{type}-up-north"] },
 	sidesolidByType: {	
 		"*-up-north": { all:false, down:true, north: true },
 		"*-up-west": { all:false, down:true, west: true },
