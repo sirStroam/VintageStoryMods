@@ -21,7 +21,9 @@ namespace FillTheGaps
 		public override void Start(ICoreAPI api)
 		{
 			api.RegisterBlockBehaviorClass("StonePathBehavior", typeof(StonePathBehavior));
-			api.RegisterBlockBehaviorClass("LevigatorBehavior", typeof(LevigatorBehavior));
+			api.RegisterBlockBehaviorClass("BetterlLadder", typeof(BlockBehaviorBetterLadder));
+			api.RegisterItemClass("StoneChisel", typeof(ItemStoneChisel));
+			api.RegisterItemClass("PolishingStone", typeof(ItemPolishingStone));
 			base.Start(api);
 
 		}

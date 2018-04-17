@@ -1,10 +1,10 @@
 {
 	code: "levigator",
 	//class: "Itemlevigator",
-	behaviors: [{name: "UnstableFalling"},{name: "LevigatorBehavior"}],
+	//behaviors: [{name: "UnstableFalling"},{name: "LevigatorBehavior"}],
 	heldTpIdleAnimation: "holdunderarm",
 	variantgroups: [
-		{ code: "metal", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
+		{ code: "metal", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "brass", "gold", "silver", "iron", "titanium" ] },
 	],
 	drawtype: "json",
 	shape: { base: "block/levigator" },
@@ -28,15 +28,14 @@
 		"break": "block/anvil"
 	},
 	maxstacksize: 1,
-	durability: 150,
 	collisionselectionboxes: [
 		{ x1: 0.125, y1: 0, z1: 0.125, x2: 0.875, y2: 0.125, z2: 0.875 },
 		{ x1: 0.4375, y1: 0.125, z1: 0.75, x2: 0.5625, y2: 0.375, z2: 0.8125 },
 	],
 	fpHandTransform: {
-		translation: { x: 0.046875, y: 0.1, z: 0 },
-		rotation: { x: 171, y: 98, z: -27 },
-		scale: 1.1
+		translation: { x: 1, y: 1, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 3
 	},
 	tpHandTransform: {
 		translation: { x: -0.8, y: -0.45, z: -0.67 },
@@ -44,6 +43,7 @@
 		scale: 0.65
 	},
 	guiTransform: {
-		origin: { x: 0.5, y: 0.34, z: 0.5 }
+		origin: { x: 0.5, y: 0.30, z: 0.5 },
+		scale: 1.5
 	}
 }

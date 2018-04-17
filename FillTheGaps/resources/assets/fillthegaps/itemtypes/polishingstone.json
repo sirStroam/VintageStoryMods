@@ -1,0 +1,8 @@
+{
+    code: "polishingstone",
+    class: "PolishingStone",
+	texture: { base: "item/polishingstone" },
+	creativeinventory: { "general": ["*"], "items": ["*"], "fillthegaps": ["*"] },
+	maxstacksize: 64,
+	materialDensity: 500
+}

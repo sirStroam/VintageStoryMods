@@ -1,0 +1,16 @@
+{
+	ingredient: { type: "item", code: "game:ingot-*", name: "metal", allowedVariants: ["copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "iron", "titanium"] },
+	pattern: [
+		"___###___",
+		"_#######_",
+		"_#######_",
+		"#########",
+		"#########",
+		"#########",
+		"_#######_",
+		"_#######_",
+		"___###___",
+	],
+	name: "Levigator",
+	output: { type: "item", code: "levigator-{metal}"  }
+}

@@ -1,7 +1,8 @@
 {
 	code: "stonechisel",
+	class: "StoneChisel",
 	variantgroups: [
-		{ code: "material", states: ["granite", "andesite", "basalt", "obsidian", "flint" ] },
+		{ code: "material", states: ["granite", "andesite", "basalt", "obsidian", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
 	],
 	maxstacksize: 1,
 	shape: { base: "item/tool/stonechisel" },
@@ -15,15 +16,16 @@
 		"stonechisel-obsidian": 70,
 		
 		"stonechisel-flint": 60,
+		"stonechisel-gold": 10,
+		"stonechisel-silver": 10,
+		"stonechisel-copper": 30,
+		"stonechisel-tinbronze": 45,
+		"stonechisel-bismuthbronze": 50,
+		"stonechisel-blackbronze": 55,
+		"stonechisel-iron": 90,
+		"stonechisel-steel": 150,
 	},
-	attackpowerbytype: {
-		"stonechisel-granite": 0.75,
-		"stonechisel-andesite": 0.75,
-		"stonechisel-basalt": 0.75,
-		"stonechisel-obsidian": 1.5,
-		
-		"stonechisel-flint": 1,
-	},
+	attackpower: 1,
 	creativeinventory: { "general": ["*"], "items": ["*"], "fillthegaps": ["*"] },
 	fpHandTransform: {
 		translation: { x: -0.1, y: 0.2, z: 0.4 },

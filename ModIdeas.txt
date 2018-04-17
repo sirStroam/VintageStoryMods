@@ -4,7 +4,8 @@ place items down on ground (sneak+righclick)
 ->Fuse trails with blasting powder
 ->ladders+
 
-bamboo saplings
+Palm trees
+Palm frond roofing
 vessel
 animal cages
 

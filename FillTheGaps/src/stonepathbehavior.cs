@@ -68,6 +68,13 @@ namespace FillTheGaps
             return false;
         }
 
+        public override ItemStack[] GetDrops(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropChanceMultiplier, ref EnumHandling handling)
+        {
+            handling = EnumHandling.PreventDefault;
+            Block block = world.BlockAccessor.GetBlock(this.block.CodeWithParts("normal"));
+            return new ItemStack[] { new ItemStack(block) };
+        }
+
 
     }
     

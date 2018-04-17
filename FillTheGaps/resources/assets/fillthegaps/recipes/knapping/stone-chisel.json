@@ -1,0 +1,17 @@
+{
+	ingredient: { type: "item", code: "game:stone-*", name: "rock", allowedVariants: ["granite", "andesite", "basalt", "obsidian", "flint"] },
+	pattern: [
+		"##__##__##",
+		"##__##__##",
+		"##__##__##",
+		"##__##__##",
+		"##__##__##",
+		"__##__##__",
+		"__##__##__",
+		"__##__##__",
+		"__##__##__",
+		"__##__##__"
+	],
+	name: "block chisel",
+	output: { type: "item", code: "stonechisel-{rock}", stacksize: 5  }
+}

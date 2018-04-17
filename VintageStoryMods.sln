@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillTheGaps", "FillTheGaps\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimitiveConstruction", "PrimitiveConstruction\PrimitiveConstruction.csproj", "{2DAFF6F5-A4C3-4F71-A2B4-061AA00032F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LampPosts", "LampPosts\LampPosts.csproj", "{A7AC5807-A869-4E04-88A0-081B5968E0F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CivicConstruction", "CivicConstruction\CivicConstruction.csproj", "{A7AC5807-A869-4E04-88A0-081B5968E0F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

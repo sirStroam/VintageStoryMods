@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "L,S",
+	ingredients: {
+		"L": { type: "item", code: "game:stone-*" },
+		"S": { type: "block", code: "game:sand-*" }
+	},
+	width: 1,
+	height: 2,
+	output: { type: "item", code: "polishingstone", quantity: 1 }
+}

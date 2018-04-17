@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "S_S	SSS	S_S",
+	ingredients: {
+		"S": { type: "item", code: "stick", quantity: 70 }
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "ladder-north", quantity: 3  }
+}

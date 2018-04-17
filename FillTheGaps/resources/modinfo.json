@@ -4,6 +4,6 @@
 	"name": "Fill the Gaps",
 	"description" : "Adding missing basics",
 	"author": "Stroam",
-	"version": "5.0",
+	"version": "6.0",
 	"gameversions": [ "1.5.1.6+" ]
 }

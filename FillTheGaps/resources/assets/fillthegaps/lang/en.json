@@ -1,9 +1,13 @@
 {
 	"game:tabname-fillthegaps": "Fill the Gaps",
 
+	"item-polishingstone": "Polising Stone",
+
+	"block-ladder-*": "Ladder",
+
 	"block-stonepath-*": "Stone path",
 
-	"item-stonechisel-*": "Stone chisel",
+	"item-stonechisel-*": "Block chisel",
 	"item-woodenmallet": "Wooden mallet",
 	
 	"block-levigator-copper": "Copper levigator",

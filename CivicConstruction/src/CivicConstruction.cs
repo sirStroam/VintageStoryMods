@@ -11,7 +11,7 @@ namespace LampPosts
 		
 		public static ModInfo MOD_INFO { get; } = new ModInfo {
 			Type		= EnumModType.Code,
-			Name        = "LampPosts",
+			Name        = "Civic Construction",
 			Description = "Adds Lamp Posts",
 			Author      = "Milo, Stroam",
 		};
