@@ -1,9 +1,14 @@
-
 {
 	"type": "code",
 	"name": "Primitive Construction",
-	"description" : "Adding primitive construction blocks",
-	"author": "Stroam",
-	"version": "2.0",
-	"gameversions": [ "1.5.2.6+" ]
+	"modid": "primitiveconstruction",
+	"version": "2.3",
+
+	"description": "Adds primitive materials",
+	"website": "https://github.com/sirStroam/VintageStoryMods",
+	"author": [ "Stroam" ],
+	
+	"dependencies": {
+		"game": "1.5.3"
+	} 
 }

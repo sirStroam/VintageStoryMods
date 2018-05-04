@@ -16,7 +16,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 
-namespace LampPosts
+namespace CivicConstruction
 {
 
     class LampPostBehavior : BlockBehavior {

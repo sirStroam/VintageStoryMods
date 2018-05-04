@@ -4,22 +4,17 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Server;
 
+[
+	assembly: ModInfo( "testmod", "testmod",
+    Description = "this is a test",
+    Website     = "https://github.com/sirStroam/VintageStoryMods",
+    Authors     = new []{ "Stroam" })
+]
 namespace TestMod
 {
-	public class TestMod : ModBase
-	{
-		public static TestMod INSTANCE { get; private set; }
-		
-		public static ModInfo MOD_INFO { get; } = new ModInfo {
-			Type		= EnumModType.Code,
-			Name        = "TestMod",
-			Description = "Example mod for testing things",
-			Author      = "stroam",
-		};
-		
-		
-		public override ModInfo GetModInfo() { return MOD_INFO; }
-		
+	public class TestMod : ModSystem
+	{	
+
         // Client
 
         //Server
@@ -31,7 +26,6 @@ namespace TestMod
 			//api.RegisterBlockBehaviorClass(BlockBehaviorRopeLadder.NAME, typeof(BlockBehaviorRopeLadder));
 			//api.RegisterBlockBehaviorClass("RotateBehavior", typeof(RotateBehavior));
 			base.Start(api);
-			INSTANCE = this;
 		}
 	}
 }

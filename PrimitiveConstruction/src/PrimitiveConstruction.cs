@@ -3,19 +3,17 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Server;
 
+[
+	assembly: ModInfo( "Primitive Construction", "primitiveconstruction",
+    Description = "Adds primitive materials",
+    Website     = "https://github.com/sirStroam/VintageStoryMods",
+    Authors     = new []{ "Stroam" })
+]
+
 namespace primitiveconstruction
 {
-	public class primitiveconstruction : ModBase
+	public class primitiveconstruction : ModSystem
 	{
-		
-		public static ModInfo MOD_INFO { get; } = new ModInfo {
-			Type		= EnumModType.Code,
-			Name        = "Primitive Construction",
-			Description = "Adds Primitive Construction Blocks",
-			Author      = "Stroam",
-		};
-		
-		public override ModInfo GetModInfo() { return MOD_INFO; }
 		
 		public override void Start(ICoreAPI api)
 		{

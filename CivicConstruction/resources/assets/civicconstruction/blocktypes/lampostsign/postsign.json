@@ -1,0 +1,43 @@
+{
+	code: "postsign",
+	creativeinventory: { "general": ["sign-ground-north"], "decorative": ["sign-ground-north"] },
+	class: "BlockSign",
+	entityclass: "Sign",
+	variantgroups: [
+		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
+	],
+	shapebytype: {
+
+	},
+	blockmaterial: "Wood",
+	lightAbsorption: 0,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	replaceable: 500,
+	resistance: 3,
+	selectionboxbytype: {
+		"*-ground-east": { x1: 0.0625, y1: 0, z1: 0.1875, x2: 0.9375, y2: 0.875, z2: 0.3125, rotateY: 270 },
+		"*-ground-south": { x1: 0.0625, y1: 0, z1: 0.1875, x2: 0.9375, y2: 0.875, z2: 0.3125, rotateY: 180 },
+		"*-ground-west": { x1: 0.0625, y1: 0, z1: 0.1875, x2: 0.9375, y2: 0.875, z2: 0.3125, rotateY: 90 },
+		"*-ground-north": { x1: 0.0625, y1: 0, z1: 0.1875, x2: 0.9375, y2: 0.875, z2: 0.3125, rotateY: 0 },
+		
+		"*-wall-east": { rotateY: 270,  x1: 0.0625, y1: 0.3125, z1: 0,  x2: 0.9375, y2: 0.8125, z2: 0.0625 },
+		"*-wall-south": { rotateY: 180,  x1: 0.0625, y1: 0.3125, z1: 0,  x2: 0.9375, y2: 0.8125, z2: 0.0625 },
+		"*-wall-west": { rotateY: 90,  x1: 0.0625, y1: 0.3125, z1: 0,  x2: 0.9375, y2: 0.8125, z2: 0.0625 },
+		"*-wall-north": { rotateY: 0,  x1: 0.0625, y1: 0.3125, z1: 0,  x2: 0.9375, y2: 0.8125, z2: 0.0625 },
+	},
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 10,
+	},
+	sounds: {
+		"place": "block/planks",
+		"walk": "walk/wood"
+	},
+	rainPermeable: true,
+	materialDensity: 600
+}

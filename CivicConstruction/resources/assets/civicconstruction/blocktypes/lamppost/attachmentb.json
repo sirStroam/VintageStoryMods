@@ -11,12 +11,12 @@
 		{ code: "dir", states: ["north", "south", "east", "west"] },
 		{ code: "type", states: ["short", "long"] }
 	],
-	creativeinventory: { "general": ["*-east-long"], "construction": ["*-east-long"] },
+	creativeinventory: { "general": ["*-east-long"], "construction": ["*-east-long"], "civicconstruction": ["*-east-long"] },
 	shapeByType: {
-		"*-north-*": { base: "{style}/attachment-{type}", rotateY: 0 },
-		"*-south-*": { base: "{style}/attachment-{type}", rotateY: 180 },
-		"*-east-*": { base: "{style}/attachment-{type}", rotateY: 270 },
-		"*-west-*": { base: "{style}/attachment-{type}", rotateY: 90 },
+		"*-north-*": { base: "block/post/{style}/attachment-{type}", rotateY: 0 },
+		"*-south-*": { base: "block/post/{style}/attachment-{type}", rotateY: 180 },
+		"*-east-*": { base: "block/post/{style}/attachment-{type}", rotateY: 270 },
+		"*-west-*": { base: "block/post/{style}/attachment-{type}", rotateY: 90 },
 	},
 	sidesolidByType: {
 		"*-north-*": { all: true, east: false, west: false },

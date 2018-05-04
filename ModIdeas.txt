@@ -103,6 +103,13 @@ seed bag
 tool belt
 chicken & baby bag
 
+====agriculture====
+Farmland searches for water once a day to hydrate
+stop bucket from placing source blocks
+grass turns farmland into grass over time
+dirt channels for watering
+clay pot for watering
+
 ====cooking update==== 
 (potatoe, beets, pursley, leek, chard, garlic, chickpeas, fava beans, field peas)
 beet sugar
@@ -119,7 +126,54 @@ potage and stew were the stables
 tart
 spiced meat
 
+====stamina and swimming====
+https://www.vintagestory.at/forums/topic/446-swimming-drowning-and-exertion/
 
+====paper====
+boil the blast fibers
+pound into pulp
+soak in quicklime
+roll flat and dry
+
+====tree mod====
+https://www.vintagestory.at/forums/topic/318-wood-processing/
+====carpentry mod====
+--wood sizes--
+name     size  amount per log
+Sticks   2x2   25
+Planks   2x4   15
+Supports 2x6   10
+Sheets   2x16  5
+Posts    4x4   9
+Beams    6x6   4
+
+--tools--
+draw knife
+drill
+frow
+
+--equipment--
+dogs - (axe+log)= timber, (saw + timber) = planks
+
+shave horse - shingles, staves, 
+
+--items--
+unfinished shingles - wrap rope around log. Place frow and hit with mallet.
+batten - placed finished shingles on them
+--saw table--
+place on saw table
+uses clay forming with charcoal for marking out products
+https://i.redd.it/z8xjvnrdbwhz.jpg
+cut with saw to yeild marked out products
+--Fixed saw table
+set length
+place wood product
+hold interract to cut
+--mechanical upgrade--
+same as fixed but no longer need to hold interract
+--cool stuff--
+shelves
+floor tool rack https://youtu.be/_eD4-CecVm8?t=7m28s
 
 ====functional rope====
 rope functions
@@ -129,16 +183,32 @@ eye bolts
 hanging planters
 
 
+====ore gen====
+api.Event.ChunkColumnGeneration(GenChunkColumn, EnumWorldGenPass.TerrainFeatures);
+api.Event.GetWorldgenBlockAccessor(OnWorldGenBlockAccessor);
+
+GetWorldgenBlockAccessor will give you a blockaccessor to access blocks that are not loaded yet
+ChunkColumnGeneration will get you the event fired when a chunk is being generated
+EnumWorldGenPass.TerrainFeatures is probably the worldgen pass you'd want to use for this
+
+
+
 
 ===Purposeful creatures===
 revered - 
 fire hack-black kite- Spawns in grassland during clear skies, by unattended lit firepits with all surround blocks able to see sky. Grabs fire from the firepit to light nearby grass lands on fire. 
 
 dog training.
+https://www.vintagestory.at/forums/topic/343-mod-dog-training/
 
 
-
-
+    Entity[] items = api.World.GetEntitiesAround(new Vec3d(), 10, 10, (e) => e is EntityItem);
+            if (items.Length > 0 && items[0].CollidedVertically)
+            {
+                Block block = (items[0] as EntityItem).Itemstack.Block;
+                api.World.BlockAccessor.SetBlock(block.BlockId, items[0].Pos.AsBlockPos);
+                items[0].Die();
+            }
 
 
 private static ModInfo modInfo { get; } = new ModInfo {

@@ -1,8 +1,14 @@
 {
 	"type": "code",
-	"name": "LampPosts",
-	"description" : "Adds lamp posts.",
-	"author": "Milo, Stroam",
-	"version": "1.0",
-	"gameversions": [ "1.5.2.6+" ]
+	"name": "Civic Construction",
+	"modid": "civicconstruction",
+	"version": "1.5",
+
+	"description": "Adds mediveal structures like lampposts",
+	"website": "https://github.com/sirStroam/VintageStoryMods",
+	"author": [ "Stroam" ],
+	
+	"dependencies": {
+		"game": "1.5.3"
+	} 
 }

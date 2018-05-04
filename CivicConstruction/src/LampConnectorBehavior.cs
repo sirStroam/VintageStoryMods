@@ -9,7 +9,7 @@ using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 
 
-namespace LampPosts
+namespace CivicConstruction
 {
 
 class LampConnectorBehavior : BlockBehavior {

@@ -3,20 +3,20 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Server;
 
+[
+	assembly: ModInfo( "Fill the Gaps", "fillthegaps",
+	Description = "Extends vanilla without straying from it",
+	Website     = "https://github.com/sirStroam/VintageStoryMods",
+	Authors     = new []{ "Stroam" })
+]
+
+
 namespace FillTheGaps
 {
-	public class FillTheGaps : ModBase
+	public class FillTheGaps : ModSystem
 	{
+
 		
-		public static ModInfo MOD_INFO { get; } = new ModInfo {
-			Type		= EnumModType.Code,
-			Name        = "FillTheGaps",
-			Description = "Adds Quick Content",
-			Author      = "Stroam",
-		};
-		
-		
-		public override ModInfo GetModInfo() { return MOD_INFO; }
 		
 		public override void Start(ICoreAPI api)
 		{

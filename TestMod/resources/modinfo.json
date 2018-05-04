@@ -1,9 +1,14 @@
-
 {
 	"type": "code",
-	"name": "TestMod",
-	"description" : "Example mod for testing things",
-	"author": "Stroam",
+	"name": "testmod",
+	"modid": "testmod",
 	"version": "0.1.0",
-	"gameversions": [ "1.5.0.4+" ]
+
+	"description": "this is a test",
+	"website": "https://github.com/sirStroam/VintageStoryMods",
+	"author": [ "Stroam" ],
+	
+	"dependencies": {
+		"game": "1.5.3"
+	} 
 }

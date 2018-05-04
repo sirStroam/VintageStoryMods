@@ -1,9 +1,14 @@
-
 {
 	"type": "code",
 	"name": "Fill the Gaps",
-	"description" : "Adding missing basics",
-	"author": "Stroam",
-	"version": "6.0",
-	"gameversions": [ "1.5.1.6+" ]
+	"modid": "fillthegaps",
+	"version": "6.2",
+
+	"description": "Extends vanilla without straying from it",
+	"website": "https://github.com/sirStroam/VintageStoryMods",
+	"author": [ "Stroam" ],
+	
+	"dependencies": {
+		"game": "1.5.3"
+	} 
 }

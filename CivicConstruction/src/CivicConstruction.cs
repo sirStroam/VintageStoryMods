@@ -4,20 +4,17 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Server;
 
-namespace LampPosts
+[
+	assembly: ModInfo( "Civic Construction", "civicconstruction",
+    Description = "Adds medieval structures like lampposts",
+    Website     = "https://github.com/sirStroam/VintageStoryMods",
+    Authors     = new []{ "Stroam" })
+]
+	
+namespace CivicConstruction
 {
-	public class LampPosts : ModBase
+	public class CivicConstruction : ModSystem
 	{
-		
-		public static ModInfo MOD_INFO { get; } = new ModInfo {
-			Type		= EnumModType.Code,
-			Name        = "Civic Construction",
-			Description = "Adds Lamp Posts",
-			Author      = "Milo, Stroam",
-		};
-		
-		
-		public override ModInfo GetModInfo() { return MOD_INFO; }
 		
         // Client
 
@@ -29,6 +26,7 @@ namespace LampPosts
 		{
 			api.RegisterBlockBehaviorClass("LampConnectorBehavior", typeof(LampConnectorBehavior));
 			api.RegisterBlockBehaviorClass("LampPostBehavior", typeof(LampPostBehavior));
+			api.RegisterBlockBehaviorClass("StonePathBehavior", typeof(StonePathBehavior));
 			base.Start(api);
 		}
 	}

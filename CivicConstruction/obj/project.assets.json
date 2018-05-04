@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github repositories\\VintageStoryMods\\LampPosts\\LampPosts.csproj",
-      "projectName": "LampPosts",
-      "projectPath": "D:\\Github repositories\\VintageStoryMods\\LampPosts\\LampPosts.csproj",
+      "projectUniqueName": "D:\\Github repositories\\VintageStoryMods\\CivicConstruction\\CivicConstruction.csproj",
+      "projectName": "CivicConstruction",
+      "projectPath": "D:\\Github repositories\\VintageStoryMods\\CivicConstruction\\CivicConstruction.csproj",
       "packagesPath": "C:\\Users\\Stroam\\.nuget\\packages\\",
-      "outputPath": "D:\\Github repositories\\VintageStoryMods\\LampPosts\\obj\\",
+      "outputPath": "D:\\Github repositories\\VintageStoryMods\\CivicConstruction\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

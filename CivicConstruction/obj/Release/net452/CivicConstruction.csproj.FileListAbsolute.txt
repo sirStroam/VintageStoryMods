@@ -1,0 +1,3 @@
+D:\Github repositories\VintageStoryMods\CivicConstruction\obj\Release\net452\CivicConstruction.csproj.CoreCompileInputs.cache
+D:\Github repositories\VintageStoryMods\CivicConstruction\obj\Release\net452\CivicConstruction.AssemblyInfoInputs.cache
+D:\Github repositories\VintageStoryMods\CivicConstruction\obj\Release\net452\CivicConstruction.AssemblyInfo.cs
