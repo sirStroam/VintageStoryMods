@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		
+		<AssemblyTitle>StressfulLife</AssemblyTitle>
+		<Authors>Stroam</Authors>
+		<Description>Adds new mechanics to Vintage Story</Description>
+		
+		<TargetFramework>net452</TargetFramework>
+		
+	</PropertyGroup>
+	<ItemGroup>
+		
+		<Reference Include="VintagestoryAPI">
+			<HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>
+		</Reference>
+		<Reference Include="VSSurvivalMod">
+			<HintPath>$(VINTAGE_STORY)/Mods/VSSurvivalMod.dll</HintPath>
+		</Reference>
+		
+	</ItemGroup>
+	<Target Name="Copy" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'Debug'">
+		<Copy SourceFiles="$(TargetPath)" DestinationFolder="$(VINTAGE_STORY)/Mods" />
+		<Copy SourceFiles="$(TargetDir)/$(TargetName).pdb" DestinationFolder="$(VINTAGE_STORY)/Mods" />
+	</Target>
+</Project>

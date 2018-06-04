@@ -298,6 +298,16 @@
             </summary>
             <param name="handler"></param>
         </member>
+        <member name="E:Vintagestory.API.Client.IClientEventAPI.OnReloadTextures">
+            <summary>
+            Called when textures got reloaded
+            </summary>
+        </member>
+        <member name="E:Vintagestory.API.Client.IClientEventAPI.OnReloadShapes">
+            <summary>
+            Called when shapes got reloaded
+            </summary>
+        </member>
         <member name="E:Vintagestory.API.Client.IClientEventAPI.OnMouseDown">
             <summary>
             Provides low level access to the mouse down event. If e.Handled is set to true, the event will not be handled by the game
@@ -323,7 +333,11 @@
             Provides low level access to the key up event. If e.Handled is set to true, the event will not be handled by the game
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "T:Vintagestory.API.Client.IClientNetworkAPI" -->
+        <member name="T:Vintagestory.API.Client.IClientNetworkAPI">
+            <summary>
+            API Features to set up a network channel for custom server&lt;-&gt;client data exchange. Client side.
+            </summary>
+        </member>
         <member name="M:Vintagestory.API.Client.IClientNetworkAPI.RegisterChannel(System.String)">
             <summary>   
             Supplies you with your very own and personal network channel with which you can send packets to the server. Use the same channelName on the client and server to have them link up.
@@ -750,27 +764,30 @@
             <param name="pos"></param>
             <returns></returns>
         </member>
-        <member name="M:Vintagestory.API.Client.ITesselatorAPI.GetTexPositionSource(Vintagestory.API.Common.Block,System.Int32)">
+        <member name="M:Vintagestory.API.Client.ITesselatorAPI.GetTexSource(Vintagestory.API.Common.Block,System.Int32,System.Boolean)">
             <summary>
             Returns the texture source from given block. This can be used to obtain the positions of the textures in the block texture atlas.
             </summary>
             <param name="block"></param>
             <param name="altTextureNumber"></param>
+            <param name="returnNullWhenMissing"></param>
             <returns></returns>
         </member>
-        <member name="M:Vintagestory.API.Client.ITesselatorAPI.GetTextureSource(Vintagestory.API.Common.Item)">
+        <member name="M:Vintagestory.API.Client.ITesselatorAPI.GetTextureSource(Vintagestory.API.Common.Item,System.Boolean)">
             <summary>
             Returns the texture source from given item. This can be used to obtain the positions of the textures in the item texture atlas.
             </summary>
             <param name="item"></param>
+            <param name="returnNullWhenMissing"></param>
             <returns></returns>
         </member>
-        <member name="M:Vintagestory.API.Client.ITesselatorAPI.GetTextureSource(Vintagestory.API.Common.Entities.EntityType,System.Int32)">
+        <member name="M:Vintagestory.API.Client.ITesselatorAPI.GetTextureSource(Vintagestory.API.Common.Entities.EntityType,System.Int32,System.Boolean)">
             <summary>
             Returns the texture source from given entity. This can be used to obtain the positions of the textures in the entity texture atlas.
             </summary>
             <param name="entity"></param>
             <param name="altTextureNumber"></param>
+            <param name="returnNullWhenMissing"></param>
             <returns></returns>
         </member>
         <member name="T:Vintagestory.API.Client.IRenderAPI">
@@ -1753,13 +1770,13 @@
         </member>
         <member name="M:Vintagestory.API.Client.ILoadedSound.SetPitch(System.Single)">
             <summary>
-            Allows you to modify the pitch of the sound. Might also be called while the sound is currently playing.
+            Allows you to modify the pitch of the sound. May also be called while the sound is currently playing.
             </summary>
             <param name="val"></param>
         </member>
         <member name="M:Vintagestory.API.Client.ILoadedSound.SetVolume(System.Single)">
             <summary>
-            Allows you to modify the volumne of the sound. Might also be called while the sound is currently playing.
+            Allows you to modify the volumne of the sound. May also be called while the sound is currently playing.
             </summary>
             <param name="val"></param>
         </member>
@@ -2800,14 +2817,14 @@
             <see cref="T:Vintagestory.API.Common.ModSystem"/> instances within it.
             </summary>
         </member>
+        <member name="P:Vintagestory.API.Common.Mod.SourceType">
+            <summary> Gets the origin file type of the mod (.cs, .dll, .zip or folder). </summary>
+        </member>
+        <member name="P:Vintagestory.API.Common.Mod.SourcePath">
+            <summary> Gets the full path to where this mod originated from, including file name. </summary>
+        </member>
         <member name="P:Vintagestory.API.Common.Mod.FileName">
             <summary> Gets the file name of this mod. </summary>
-        </member>
-        <member name="P:Vintagestory.API.Common.Mod.Path">
-            <summary> Gets the path to where this mod originated from. </summary>
-        </member>
-        <member name="P:Vintagestory.API.Common.Mod.Type">
-            <summary> Gets the origin file type of the mod (.cs, .dll, .zip or folder). </summary>
         </member>
         <member name="P:Vintagestory.API.Common.Mod.Info">
             <summary>
@@ -2820,33 +2837,30 @@
         <member name="P:Vintagestory.API.Common.Mod.Icon">
             <summary>
             Holds the icon of this mod. Found as "modicon.png" in the root of
-            the mod's folder or archive.
+            the mod's folder or archive. May be null.
             </summary>
+        </member>
+        <member name="P:Vintagestory.API.Common.Mod.Logger">
+            <summary> Gets the logger associated with this mod. </summary>
         </member>
         <member name="P:Vintagestory.API.Common.Mod.Systems">
             <summary> Gets a collection of systems belonging to this mod. </summary>
         </member>
-        <member name="P:Vintagestory.API.Common.Mod.ErrorWhileLoading">
-            <summary> Gets whether there was an error while loading this mod. </summary>
-        </member>
-        <member name="P:Vintagestory.API.Common.Mod.DependencyError">
-            <summary> Gets whether there was an error when checking this mod's dependencies. </summary>
-        </member>
-        <member name="T:Vintagestory.API.Common.ModSourceType">
+        <member name="T:Vintagestory.API.Common.EnumModSourceType">
             <summary>
             Represents the origin file type of the mod.
             </summary>
         </member>
-        <member name="F:Vintagestory.API.Common.ModSourceType.CS">
+        <member name="F:Vintagestory.API.Common.EnumModSourceType.CS">
             <summary> A single .cs source file. (Code mod without assets.) </summary>
         </member>
-        <member name="F:Vintagestory.API.Common.ModSourceType.DLL">
+        <member name="F:Vintagestory.API.Common.EnumModSourceType.DLL">
             <summary> A single .dll source file. (Code mod without assets.) </summary>
         </member>
-        <member name="F:Vintagestory.API.Common.ModSourceType.ZIP">
+        <member name="F:Vintagestory.API.Common.EnumModSourceType.ZIP">
             <summary> A .zip archive able to contain assets and code files. </summary>
         </member>
-        <member name="F:Vintagestory.API.Common.ModSourceType.FOLDER">
+        <member name="F:Vintagestory.API.Common.EnumModSourceType.Folder">
             <summary> A folder able to contain assets and code files. </summary>
         </member>
         <member name="F:Vintagestory.API.Common.EnumReplaceMode.Replaceable">
@@ -5048,7 +5062,7 @@
         </member>
         <member name="P:Vintagestory.API.Common.IModLoader.Mods">
             <summary>
-            Gets a collection of all loaded mods.
+            Gets a collection of all enabled mods.
             </summary>
         </member>
         <member name="P:Vintagestory.API.Common.IModLoader.Systems">
@@ -5058,13 +5072,13 @@
         </member>
         <member name="M:Vintagestory.API.Common.IModLoader.GetMod(System.String)">
             <summary>
-            Gets the loaded mod with the specified mod ID (domain).
+            Gets the enabled mod with the specified mod ID (domain).
             Returns null if no mod with that mod ID was found.
             </summary>
         </member>
-        <member name="M:Vintagestory.API.Common.IModLoader.IsModLoaded(System.String)">
+        <member name="M:Vintagestory.API.Common.IModLoader.IsModEnabled(System.String)">
             <summary>
-            Returns if the mod with the specified mod ID (domain) is loaded.
+            Returns if the mod with the specified mod ID (domain) is enabled.
             </summary>
         </member>
         <member name="M:Vintagestory.API.Common.IModLoader.GetModSystem(System.String)">
@@ -5083,11 +5097,6 @@
         <member name="M:Vintagestory.API.Common.IModLoader.IsModSystemEnabled(System.String)">
             <summary>
             Returns if the mod system with the specified full name is loaded and enabled.
-            </summary>
-        </member>
-        <member name="P:Vintagestory.API.Common.IModLoader.Logger">
-            <summary>
-            Can be used to log warnings/ errors
             </summary>
         </member>
         <member name="T:Vintagestory.API.Common.IPlayer">
@@ -5841,6 +5850,13 @@
             <param name="type"></param>
             <returns></returns>
         </member>
+        <member name="M:Vintagestory.API.Common.CollectibleObject.HasBehavior(System.Type)">
+            <summary>
+            Returns true if the block has given behavior
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
         <member name="M:Vintagestory.API.Common.CollectibleObject.HasBehavior(System.String,Vintagestory.API.Common.IClassRegistryAPI)">
             <summary>
             Returns true if the block has given behavior
@@ -6143,9 +6159,14 @@
             Interface to the clients and servers event/debug/error logging utilty
             </summary>
         </member>
+        <member name="E:Vintagestory.API.Common.ILogger.EntryAdded">
+            <summary>
+            Fired every time a log entry has been added
+            </summary>
+        </member>
         <member name="M:Vintagestory.API.Common.ILogger.AddListener(Vintagestory.API.Common.LogEntryDelegate)">
             <summary>
-            Adds a log entry listener to be called everytime a log entry has been addded
+            Adds a log entry listener to be called every time a log entry has been added
             </summary>
             <param name="listener"></param>
         </member>
@@ -6554,6 +6575,13 @@
             <param name="centerOrder">If true, the blocks will be ordered by the distance to the center position</param>
             <returns></returns>
         </member>
+        <member name="M:Vintagestory.API.Common.IBlockAccessor.SetBlock(System.UInt16,Vintagestory.API.MathTools.BlockPos)">
+            <summary>
+            Set a block at the given position. Use blockid 0 to clear that position from any blocks. Marks the chunk dirty so that it gets saved to disk during shutdown or next autosave.
+            </summary>
+            <param name="blockId"></param>
+            <param name="pos"></param>
+        </member>
         <member name="M:Vintagestory.API.Common.IBlockAccessor.SetBlock(System.UInt16,Vintagestory.API.MathTools.BlockPos,Vintagestory.API.Common.ItemStack)">
             <summary>
             Set a block at the given position. Use blockid 0 to clear that position from any blocks. Marks the chunk dirty so that it gets saved to disk during shutdown or next autosave.
@@ -6931,6 +6959,11 @@
             Will drop all of the players inventory contents
             </summary>
         </member>
+        <member name="P:Vintagestory.API.Common.IWorldChunk.MapChunk">
+            <summary>
+            Holds a reference to the current map data of this chunk column
+            </summary>
+        </member>
         <member name="P:Vintagestory.API.Common.IWorldChunk.Blocks">
             <summary>
             Holds all the blockids for each coordinate, access via index: (y * chunksize + z) * chunksize + x
@@ -7206,12 +7239,13 @@
             <param name="matches"></param>
             <returns></returns>
         </member>
-        <member name="M:Vintagestory.API.Common.IWorldAccessor.GetIntersectingEntities(Vintagestory.API.MathTools.BlockPos,Vintagestory.API.MathTools.Cuboidf[])">
+        <member name="M:Vintagestory.API.Common.IWorldAccessor.GetIntersectingEntities(Vintagestory.API.MathTools.BlockPos,Vintagestory.API.MathTools.Cuboidf[],Vintagestory.API.Common.ActionConsumable{Vintagestory.API.Common.Entities.Entity})">
             <summary>
             Retrieves the first found entity that intersects any of the supplied collisionboxes offseted by basePos. This is a helper method for you to determine if you can place a block at given position. You can also implement it yourself with intersection testing and GetEntitiesAround()
             </summary>
             <param name="collisionBoxes"></param>
             <param name="basePos"></param>
+            <param name="matches"></param>
             <returns></returns>
         </member>
         <member name="M:Vintagestory.API.Common.IWorldAccessor.NearestPlayer(System.Double,System.Double,System.Double)">
@@ -8083,6 +8117,11 @@
             8 bits that are sent to the graphics card for each vertex of the blocks shape. The lower 3 bits are currently used for altering the vertexes z-depth to fix a bunch of z-fighting issues
             </summary>
         </member>
+        <member name="F:Vintagestory.API.Common.Block.VertexFlags">
+            <summary>
+            Data thats passed on to the graphics card for every vertex of the blocks model
+            </summary>
+        </member>
         <member name="F:Vintagestory.API.Common.Block.LightHsv">
             <summary>
             For light emitting blocks: hue, saturation and brightness value
@@ -8318,14 +8357,14 @@
             <param name="stack">Set if its an itemstack for which the engine wants to check the light level</param>
             <returns></returns>
         </member>
-        <member name="M:Vintagestory.API.Common.Block.GetDecal(Vintagestory.API.Common.IWorldAccessor,Vintagestory.API.Client.ITexPositionSource,Vintagestory.API.Client.MeshData@,Vintagestory.API.Client.MeshData@)">
+        <member name="M:Vintagestory.API.Common.Block.GetDecal(Vintagestory.API.Common.IWorldAccessor,Vintagestory.API.MathTools.BlockPos,Vintagestory.API.Client.ITexPositionSource,Vintagestory.API.Client.MeshData@,Vintagestory.API.Client.MeshData@)">
             <summary>
-            Called before a decal is created 
+            Called before a decal is created.
             </summary>
             <param name="world"></param>
             <param name="decalTexSource"></param>
-            <param name="decalModelData"></param>
-            <param name="blockModelData"></param>
+            <param name="decalModelData">The block model which need UV values for the decal texture</param>
+            <param name="blockModelData">The original block model</param>
         </member>
         <member name="M:Vintagestory.API.Common.Block.CanAttachBlockAt(Vintagestory.API.Common.IBlockAccessor,Vintagestory.API.Common.Block,Vintagestory.API.MathTools.BlockPos,Vintagestory.API.MathTools.BlockFacing)">
             <summary>
@@ -8621,6 +8660,13 @@
             <returns></returns>
         </member>
         <member name="M:Vintagestory.API.Common.Block.GetBehavior(System.Type,System.Boolean)">
+            <summary>
+            Returns the blocks behavior of given type, if it has such behavior
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vintagestory.API.Common.Block.GetBehavior(System.Type)">
             <summary>
             Returns the blocks behavior of given type, if it has such behavior
             </summary>
@@ -9162,7 +9208,25 @@
             Returns if this mod should be loaded for the given app side.
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Vintagestory.API.Common.ModSystem.ExecuteOrder" -->
+        <member name="M:Vintagestory.API.Common.ModSystem.ExecuteOrder">
+            <summary>
+            If you need mods to be executed in a certain order, adjust this methods return value.
+            The server will call each Mods Start() method the ascending order of each mods execute order value. And thus, as long as every mod registers it's event handlers in the Start() method, all event handlers will be called in the same execution order.
+            Default execute order of some survival mod parts
+            Worldgen:
+            - GenTerra: 0 
+            - RockStrata: 0.1
+            - Deposits: 0.2
+            - Caves: 0.3
+            - Blocklayers: 0.4
+            Loading
+            - Json Overrides loader: 0.05
+            - Load hardcoded mantle block: 0.1
+            - Block&amp;Item Loader: 0.2
+            - Recipe (Smithing, Knapping, Clayforming, Grid recipes, Alloys) Loader: 1
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:Vintagestory.API.Common.ModSystem.AllowRuntimeReload">
             <summary>
             When the server reloads mods at runtime, should this mod also be reloaded. Return false e.g. for any mod that adds blocks.
@@ -9264,24 +9328,24 @@
             Makes sure that Translation and Rotation is not null
             </summary>
         </member>
-        <member name="T:Vintagestory.API.Common.ModType">
+        <member name="T:Vintagestory.API.Common.EnumModType">
             <summary>
             Describes the type of a mod. Allows easy recognition and limiting of
             what any particular mod can do.
             </summary>
         </member>
-        <member name="F:Vintagestory.API.Common.ModType.Theme">
+        <member name="F:Vintagestory.API.Common.EnumModType.Theme">
             <summary>
             Makes only theme changes (texture, shape, sound, music) to existing
             game or mod assets / content without adding new content or code.
             </summary>
         </member>
-        <member name="F:Vintagestory.API.Common.ModType.Content">
+        <member name="F:Vintagestory.API.Common.EnumModType.Content">
             <summary>
             Can modify any existing assets, or add new content, but no code.
             </summary>
         </member>
-        <member name="F:Vintagestory.API.Common.ModType.Code">
+        <member name="F:Vintagestory.API.Common.EnumModType.Code">
             <summary>
             Can modify existing assets, add new content and make use of C#
             source files (.cs) and pre-compiled assemblies (.dll).
@@ -9294,10 +9358,10 @@
             <see cref="T:Vintagestory.API.Common.ModInfoAttribute"/>.
             </summary>
         </member>
-        <member name="P:Vintagestory.API.Common.ModInfo.Type">
+        <member name="F:Vintagestory.API.Common.ModInfo.Type">
             <summary> The type of this mod. Can be "Theme", "Content" or "Code". </summary>
         </member>
-        <member name="P:Vintagestory.API.Common.ModInfo.Name">
+        <member name="F:Vintagestory.API.Common.ModInfo.Name">
             <summary> The name of this mod. For example "My Example Mod". </summary>
         </member>
         <member name="P:Vintagestory.API.Common.ModInfo.ModID">
@@ -9307,13 +9371,13 @@
             whitespace and special characters) if missing.)
             </summary>
         </member>
-        <member name="P:Vintagestory.API.Common.ModInfo.Version">
+        <member name="F:Vintagestory.API.Common.ModInfo.Version">
             <summary> The version of this mod. For example "2.10.4". (optional) </summary>
         </member>
-        <member name="P:Vintagestory.API.Common.ModInfo.Description">
+        <member name="F:Vintagestory.API.Common.ModInfo.Description">
             <summary> A short description of what this mod does. (optional) </summary>
         </member>
-        <member name="P:Vintagestory.API.Common.ModInfo.Website">
+        <member name="F:Vintagestory.API.Common.ModInfo.Website">
             <summary> Location of the website or project site of this mod. (optional) </summary>
         </member>
         <member name="P:Vintagestory.API.Common.ModInfo.Authors">
@@ -9344,12 +9408,12 @@
             </summary>
         </member>
         <member name="M:Vintagestory.API.Common.ModInfo.IsValidModID(System.String)">
-            <summary>
-            Returns whether the specified domain is valid.
+             <summary>
+             Returns whether the specified domain is valid.
             
-            Tests if the string is non-null, has a length of at least 1, starts with
-            a basic lowercase letter and contains only lowercase letters and numbers.
-            </summary>
+             Tests if the string is non-null, has a length of at least 1, starts with
+             a basic lowercase letter and contains only lowercase letters and numbers.
+             </summary>
         </member>
         <member name="T:Vintagestory.API.Common.ModInfoAttribute">
             <summary>
@@ -9684,9 +9748,9 @@
             </summary>
             <value></value>
         </member>
-        <member name="P:Vintagestory.API.Server.IServerAPI.IsSinglePlayer">
+        <member name="P:Vintagestory.API.Server.IServerAPI.IsDedicated">
             <summary>
-            Returns whether the current server a singpleplayer world
+            Returns whether the current server a dedicated server
             </summary>
             <value></value>
         </member>
@@ -9790,7 +9854,11 @@
             <param name="message"></param>
             <param name="args"></param>
         </member>
-        <!-- Badly formed XML comment ignored for member "T:Vintagestory.API.Server.IServerNetworkAPI" -->
+        <member name="T:Vintagestory.API.Server.IServerNetworkAPI">
+            <summary>
+            API Features to set up a network channel for custom server&lt;-&gt;client data exchange. Server side.
+            </summary>
+        </member>
         <member name="M:Vintagestory.API.Server.IServerNetworkAPI.RegisterChannel(System.String)">
             <summary>   
             Supplies you with your very own and personal network channel that you can use to send packets across the network.  Use the same channelName on the client and server to have them link up.
@@ -9863,11 +9931,6 @@
             Returns the players privilege group
             </summary>
             <returns></returns>
-        </member>
-        <member name="P:Vintagestory.API.Server.IServerPlayer.Privileges">
-            <summary>
-            Returns all privileges the player currenly has through role or through direct privilege assignment
-            </summary>
         </member>
         <member name="M:Vintagestory.API.Server.IServerPlayer.BroadcastPlayerData">
             <summary>
@@ -10501,11 +10564,6 @@
             </summary>
             <param name="key"></param>
             <returns></returns>
-        </member>
-        <member name="P:Vintagestory.API.Server.IServerChunk.MapChunk">
-            <summary>
-            Holds a reference to the current map data of this chunk column
-            </summary>
         </member>
         <member name="F:Vintagestory.API.Server.Privilege.buildblocks">
             <summary>
@@ -13345,6 +13403,36 @@
             All vertical blockfacing flags combined
             </summary>
         </member>
+        <member name="F:Vintagestory.API.MathTools.BlockFacing.NORTH">
+            <summary>
+            Faces towards negative Z
+            </summary>
+        </member>
+        <member name="F:Vintagestory.API.MathTools.BlockFacing.EAST">
+            <summary>
+            Faces towards positive X
+            </summary>
+        </member>
+        <member name="F:Vintagestory.API.MathTools.BlockFacing.SOUTH">
+            <summary>
+            Faces towards positive Z
+            </summary>
+        </member>
+        <member name="F:Vintagestory.API.MathTools.BlockFacing.WEST">
+            <summary>
+            Faces towards negative X
+            </summary>
+        </member>
+        <member name="F:Vintagestory.API.MathTools.BlockFacing.UP">
+            <summary>
+            Faces towards positive Y
+            </summary>
+        </member>
+        <member name="F:Vintagestory.API.MathTools.BlockFacing.DOWN">
+            <summary>
+            Faces towards negative Y
+            </summary>
+        </member>
         <member name="F:Vintagestory.API.MathTools.BlockFacing.ALLFACES">
             <summary>
             All block faces in the order of N, E, S, W, U, D
@@ -15028,49 +15116,49 @@
             <summary>
             Turn the token into a string
             </summary>
-            <param name="defaultValue"></param>
+            <param name="defaultValue">If the conversion fails, this value is used instead</param>
             <returns></returns>
         </member>
         <member name="M:Vintagestory.API.JsonObject.AsStringArray(System.String[])">
             <summary>
             Turn the token into a string array
             </summary>
-            <param name="defaultValue"></param>
+            <param name="defaultValue">If the conversion fails, this value is used instead</param>
             <returns></returns>
         </member>
         <member name="M:Vintagestory.API.JsonObject.AsFloatArray(System.Single[])">
             <summary>
             Turn the token into a float array
             </summary>
-            <param name="defaultValue"></param>
+            <param name="defaultValue">If the conversion fails, this value is used instead</param>
             <returns></returns>
         </member>
         <member name="M:Vintagestory.API.JsonObject.AsBool(System.Boolean)">
             <summary>
             Turn the token into a boolean
             </summary>
-            <param name="defaultValue"></param>
+            <param name="defaultValue">If the conversion fails, this value is used instead</param>
             <returns></returns>
         </member>
         <member name="M:Vintagestory.API.JsonObject.AsInt(System.Int32)">
             <summary>
             Turn the token into an integer
             </summary>
-            <param name="defaultValue"></param>
+            <param name="defaultValue">If the conversion fails, this value is used instead</param>
             <returns></returns>
         </member>
         <member name="M:Vintagestory.API.JsonObject.AsFloat(System.Single)">
             <summary>
             Turn the token into a float
             </summary>
-            <param name="defaultValue"></param>
+            <param name="defaultValue">If the conversion fails, this value is used instead</param>
             <returns></returns>
         </member>
         <member name="M:Vintagestory.API.JsonObject.AsDouble(System.Double)">
             <summary>
             Turn the token into a double
             </summary>
-            <param name="defaultValue"></param>
+            <param name="defaultValue">If the conversion fails, this value is used instead</param>
             <returns></returns>
         </member>
         <member name="M:Vintagestory.API.JsonObject.ToString">

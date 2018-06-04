@@ -1,7 +1,7 @@
 {
 	"game:tabname-fillthegaps": "Fill the Gaps",
 
-	"item-polishingstone": "Polising Stone",
+	"item-polishingstone": "Polishing Stone",
 
 	"block-ladder-*": "Ladder",
 
@@ -44,11 +44,11 @@
 	"block-claybrickstairs-fire-up-north": "Fire clay brick stairs",
 	"block-claybrickstairs-red-up-north": "Red clay brick stairs",
 
-	"block-hayslab-normal-down": "hay slab",
-	"block-haystairs-normal-up-north": "hay stairs",
+	"block-hayslab-normal-*": "Hay slab",
+	"block-haystairs-normal-*": "Hay stairs",
 
-	"block-planks-bamboo-ud": "Bamboo planks",
-	"block-plankslab-bamboo-down": "bamboo slab",
+	"block-planks-bamboo-*": "Bamboo planks",
+	"block-plankslab-bamboo-*": "Bamboo slab",
 	
 	"block-polishedstonestairs-andesite-up-north": "Polished andesite stone stairs",
 	"block-polishedstonestairs-chalk-up-north": "Polished chalk stone stairs",

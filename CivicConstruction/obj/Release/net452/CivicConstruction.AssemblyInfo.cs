@@ -9,9 +9,9 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("Stroam")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("Posts for Lanterns and stuff")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Medieval constructs")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CivicConstruction")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Lamp Post")]
+[assembly: System.Reflection.AssemblyTitleAttribute("CivicConstruction")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
