@@ -1,9 +1,0 @@
-
-{
-	"type": "code",
-	"name": "Pottery Kiln",
-	"description" : "Adding muliblock pottery kilns",
-	"author": "Stroam",
-	"version": "1.0",
-	"gameversions": [ "1.5.3" ]
-}

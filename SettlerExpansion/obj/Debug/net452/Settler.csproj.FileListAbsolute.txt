@@ -1,0 +1,3 @@
+D:\Github repositories\VintageStoryMods\SettlerExpansion\obj\Debug\net452\Settler.csproj.CoreCompileInputs.cache
+D:\Github repositories\VintageStoryMods\SettlerExpansion\obj\Debug\net452\Settler.AssemblyInfoInputs.cache
+D:\Github repositories\VintageStoryMods\SettlerExpansion\obj\Debug\net452\Settler.AssemblyInfo.cs

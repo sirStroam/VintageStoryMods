@@ -1,0 +1,14 @@
+{
+	"type": "code",
+	"name": "Brick by Brick",
+	"modid": "bbb",
+	"version": "1.0.0",
+
+	"description": "Adds tools, materials, and constructs",
+	"website": "https://github.com/sirStroam/VintageStoryMods",
+	"author": [ "Stroam" ],
+	
+	"dependencies": {
+		"game": "1.5.3+"
+	} 
+}

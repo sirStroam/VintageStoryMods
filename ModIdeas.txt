@@ -202,19 +202,22 @@ dog training.
 https://www.vintagestory.at/forums/topic/343-mod-dog-training/
 
 
-    Entity[] items = api.World.GetEntitiesAround(new Vec3d(), 10, 10, (e) => e is EntityItem);
-            if (items.Length > 0 && items[0].CollidedVertically)
-            {
-                Block block = (items[0] as EntityItem).Itemstack.Block;
-                api.World.BlockAccessor.SetBlock(block.BlockId, items[0].Pos.AsBlockPos);
-                items[0].Die();
-            }
+SemVer is a standard that arose from the hell that is dependency versioning. People would just version things as the feel like it, and when you'd depend on other projects, nobody would really know what change in versioning will cause things to break and which ones won't. So smart people came up with a standard as such:
+
+You have a version MAJOR.MINOR.PATCH.
+
+MAJOR: API breaking changes. Probably not compatible.
+MINOR: API additions and marking things as possibly breaking in the future.
+PATCH: Other additions, content, bugfixes that don't affect the API.
 
 
-private static ModInfo modInfo { get; } = new ModInfo {
-    Name = "Client+",
-    Description = "A small set of client-only commands and chat macros.",
-    Author = "Milo Christiansen",
-    Version = "0.4.0",
-};
-public override ModInfo GetModInfo() => modInfo;
+water physics tests for >5000
+/// A value usually between 0-9999 that indicates which blocks may be replaced with others.
+ /// - Any block with replaceable value above 5000 will be washed away by water
+ /// - Any block with replaceable value above 6000 will replaced when the player tries to place a block(edited)
+/// Examples:
+/// 0 = Bedrock
+/// 6000 = Tallgrass
+/// 9000 = Lava
+/// 9500 = Water
+/// 9999 = Air

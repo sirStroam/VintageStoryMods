@@ -1,0 +1,42 @@
+{
+    code: "planks",
+    behaviors: [{name: "Pillar"}],
+	variantgroups: [
+        { code: "type", states: ["bamboo"] },
+        { code: "rotation", states: ["ud", "ns", "we"] },
+	],
+	creativeinventory: { "general": ["*-ud"], "construction": ["*-ud"], "BbB": ["*-ud"] },
+	shape: { base: "game:block/basic/cube" },
+	blockmaterial: "Wood",
+	drawtype: "cube",
+	texturesByType: {
+        "*-ud": {
+			"all": { base: "game:block/wood/planks/{type}-side" },
+			"up": { base: "game:block/wood/planks/{type}-top" },
+			"down": { base: "game:block/wood/planks/{type}-top" }
+		},
+		"*-ns": {
+			"all": { base: "game:block/wood/planks/{type}-side" },
+			"west": { base: "block/wood/planks/bamboo-side-h" },
+			"east": { base: "block/wood/planks/bamboo-side-h" },
+			"north": { base: "game:block/wood/planks/{type}-top" },
+			"south": { base: "game:block/wood/planks/{type}-top" }
+		},
+		"*-we": {
+			"all": { base: "block/wood/planks/bamboo-side-h" },
+			"west": { base: "game:block/wood/planks/{type}-top" },
+			"east": { base: "game:block/wood/planks/{type}-top" }
+		},
+	},
+	resistance: 2.75,
+	sounds: {
+		"place": "block/planks",
+		"walk": "walk/wood"
+	},
+	combustibleProps: {
+		burnTemperature: 800,
+		burnDuration: 24,
+	},
+	maxStackSize: 32,
+	materialDensity: 400
+}

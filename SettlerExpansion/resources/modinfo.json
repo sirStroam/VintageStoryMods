@@ -1,0 +1,9 @@
+
+{
+	"type": "code",
+	"name": "Settler Expansion",
+	"description" : "Adds new mechanics to VS",
+	"author": "Stroam",
+	"version": "0.0.1",
+	"gameversions": [ "1.5.3" ]
+}

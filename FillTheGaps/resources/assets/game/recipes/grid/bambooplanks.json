@@ -1,9 +1,0 @@
-{
-	ingredientPattern: "SS	SS",
-	ingredients: {
-		"S": { type: "item", code: "bamboostakes", quantity: 70  },
-	},
-	width: 2,
-	height: 2,
-	output: { type: "block", code: "planks-bamboo", quantity: 1  }
-}
