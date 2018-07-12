@@ -6,9 +6,9 @@
 
 	"description": "Adds tools, materials, and constructs",
 	"website": "https://github.com/sirStroam/VintageStoryMods",
-	"author": [ "Stroam" ],
+	"author": "Stroam",
 	
 	"dependencies": {
-		"game": "1.5.3+"
+		"game": "1.5.5+"
 	} 
 }

@@ -19,9 +19,9 @@ namespace BbB
 		{
 			
 			base.Start(api);
-			//api.RegisterItemClass("StoneChisel", typeof(ItemStoneChisel));
-			//api.RegisterBlockBehaviorClass("rotateninety", typeof(rotateninety));
-			//api.RegisterBlockBehaviorClass("WallBehavior", typeof(WallBehavior));
+			api.RegisterBlockBehaviorClass("LampConnectorBehavior", typeof(LampConnectorBehavior));
+			api.RegisterBlockBehaviorClass("LampPostBehavior", typeof(LampPostBehavior));
+			api.RegisterBlockBehaviorClass("rotateninety", typeof(rotateninety));
 		}
 	}
 }

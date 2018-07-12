@@ -1,0 +1,13 @@
+{
+	ingredientPattern: "   , WR,GQS",
+	ingredients: {
+		"S": { type: "block", code: "game:sand-*" },
+		"G": { type: "block", code: "game:gravel-*" },
+		"Q": { type: "item", code: "game:quicklime" },
+		"W": { type: "block", code: "game:woodbucket-filled" },
+		"R": { type: "item", code: "game:stone-*", quantity: 16, name: "rock", allowedVariants: ["andesite", "chalk", "claystone", "granite", "sandstone", "shale", "basalt"] }
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "romanroad-{rock}-square-east" }
+}

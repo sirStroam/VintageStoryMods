@@ -136,7 +136,7 @@ namespace settler
         /// <param name="canSwim"> Determines if mob can go in water 2+ deep.</param>
         /// <returns> BlockPos of valid movement in the specified direction or null if there isn't one.</returns>
 
-        public BlockPos canMoveHere(BlockPos fromPos, BlockPos feetBlockPos, float stepHeight = 1, float dropHeight = 1, bool canSwim = false)
+        /*public BlockPos canMoveHere(BlockPos fromPos, BlockPos feetBlockPos, float stepHeight = 1, float dropHeight = 1, bool canSwim = false)
         {
             Dictionary<BlockPos,Block> column = new Dictionary<BlockPos,Block>();
             BlockPos headPos = feetBlockPos;
@@ -151,7 +151,7 @@ namespace settler
             BlockPos temp = headPos;
             if(column[temp].CollisionBoxes != null)
             {//solid at head
-                if(stepHeight < entityHeight) {return false;}
+                if(stepHeight < entityHeight) {return null;}
                 int i = 0;
                 bool hasNonSolid = false;
                 while(!hasNonSolid && i<stepHeight)
@@ -163,7 +163,7 @@ namespace settler
                         for(int j = entityHeight-1; j>0;j--) //array is height plus step so shouldn't go off the end
                         {
                             temp.Up();
-                            if(column[temp]. .CollisionBoxes != null) {return false;}
+                           // if(column[temp]. .CollisionBoxes != null) {return false;}
                         }
                         temp = fromPos.UpCopy(entityHeight); //start at above head
                         this.entity.World.BulkBlockAccessor.WalkBlocks(fromPos.UpCopy(entityHeight-1), //copy from above head
@@ -171,10 +171,10 @@ namespace settler
                                                                     (block, pos) => column.Add(pos, block));
                         for(int j = i; j>0;j--)
                         {//checks colum above entity head to see if there's room to step up.
-                            if(column[temp].CollisionBoxes != null) {return false;}
+                            if(column[temp].CollisionBoxes != null) {return null;}
                             temp.Up();
                         }
-                        return true;
+                        //return true;
                     }
                 }
             } else 
@@ -210,15 +210,15 @@ namespace settler
                         if(column[temp].CollisionBoxes != null) { return null;}
                         temp.Up();
                     }
-                    return true;
+                    //return true;
                 } else 
                 {
                     if(column[temp].CollisionBoxes == null) {return null;}//if no solid before drop height return null.
-                    return true;//else return true
+                    //return true;//else return true
                 }
             }
 
-        }
+        }*/
 
         private static int roundUp(float num)
         {

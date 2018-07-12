@@ -1,9 +1,0 @@
-{
-	ingredientPattern: "S_S,S_S",
-	ingredients: {
-		"S": { type: "item", code: "game:stick" }
-	},
-	width: 3,
-	height: 2,
-	output: { type: "block", code: "gate-n", quantity: 1  }
-}

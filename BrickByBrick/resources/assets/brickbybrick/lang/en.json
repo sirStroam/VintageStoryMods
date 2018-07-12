@@ -1,0 +1,19 @@
+{
+    "game:tabname-BbB": "Brick by Brick",
+    "block-claybricks-red": "Red clay bricks",
+    "block-softroad-sand-*": "Stone path laid in sand",
+    "block-softroad-gravel-*": "Stone path laid in gravel",
+    "block-romanroad-*": "Roman road",
+    "item-stonebrick-*": "Stonebrick",
+    "block-adobe": "Adobe bricks",
+    "block-cob": "Cob",
+    "block-fence-wicker-*": "Wicker fence",
+    "block-attachment-industrial-*": "Industrial style lamppost mount",
+    "block-attachment-railroad-*": "Railroad style lampost mount",
+    "block-base": "Post base",
+    "block-post-industrial-*": "Industrial style post",
+    "block-post-railroad-*": "Railroad style post",
+    "block-gate-gap-*": "Fence Gap",
+    "block-haybale-*": "Bale of hay",
+    "block-planks-bamboo-*": "Bamboo planks"
+}

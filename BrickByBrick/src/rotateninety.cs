@@ -10,7 +10,7 @@
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 
-namespace primitiveconstruction
+namespace BbB
 {
     // Used for the post, should change shape based on side connections.
     class rotateninety : BlockBehavior

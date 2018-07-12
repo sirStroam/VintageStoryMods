@@ -1,9 +1,0 @@
-{
-	ingredientPattern: "SSS,SSS",
-	ingredients: {
-		"S": { type: "item", code: "game:stick" }
-	},
-	width: 3,
-	height: 2,
-	output: { type: "block", code: "wickerfence-ew", quantity: 8  }
-}

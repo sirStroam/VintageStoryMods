@@ -1,7 +1,7 @@
 {
     code: "haybale",
     behaviors: [{name: "Pillar"}],
-	shape: { base: "block/basic/cube" },
+	shape: { base: "game:block/basic/cube" },
 	drawtype: "cube",
 	variantgroups: [
         { code: "type", states: ["normal", "bamboo"] },
@@ -11,10 +11,6 @@
 	blockmaterial: "Plant",
 	replaceable: 900,
 	lightAbsorption: 99,
-	textures: {
-		horizontals: { base: "block/hay/{type}-side" },
-		verticals: { base: "block/hay/{type}-top" },
-    },
     texturesByType: {
         "*-ud": {
 			"all": { base: "game:block/hay/{type}-side" },

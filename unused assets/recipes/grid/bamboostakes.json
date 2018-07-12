@@ -1,9 +1,0 @@
-{
-	ingredientPattern: "S",
-	ingredients: {
-		"S": { type: "block", code: "game:planks-bambo*" },
-	},
-	width: 1,
-	height: 1,
-	output: { type: "item", code: "game:bamboostakes", quantity: 4  }
-}
