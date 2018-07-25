@@ -1,4 +1,0 @@
-[
-    { file: "game:recipes/grid/bambooplanks", op: "add", path: "/enabled", value: false},
-    { file: "game:recipes/grid/haybale", op: "add", path: "/enabled", value: false}
-]

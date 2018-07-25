@@ -1,0 +1,3 @@
+D:\Github repositories\VintageStoryMods\StressfulLife\obj\Release\net452\StressfulLife.csproj.CoreCompileInputs.cache
+D:\Github repositories\VintageStoryMods\StressfulLife\obj\Release\net452\StressfulLife.AssemblyInfoInputs.cache
+D:\Github repositories\VintageStoryMods\StressfulLife\obj\Release\net452\StressfulLife.AssemblyInfo.cs

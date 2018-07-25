@@ -1,3 +1,11 @@
 D:\Github repositories\VintageStoryMods\SettlerExpansion\obj\Debug\net452\Settler.csproj.CoreCompileInputs.cache
 D:\Github repositories\VintageStoryMods\SettlerExpansion\obj\Debug\net452\Settler.AssemblyInfoInputs.cache
 D:\Github repositories\VintageStoryMods\SettlerExpansion\obj\Debug\net452\Settler.AssemblyInfo.cs
+D:\Github repositories\VintageStoryMods\SettlerExpansion\bin\Debug\net452\Settler.dll
+D:\Github repositories\VintageStoryMods\SettlerExpansion\bin\Debug\net452\Settler.pdb
+D:\Github repositories\VintageStoryMods\SettlerExpansion\bin\Debug\net452\VintagestoryAPI.dll
+D:\Github repositories\VintageStoryMods\SettlerExpansion\bin\Debug\net452\VSSurvivalMod.dll
+D:\Github repositories\VintageStoryMods\SettlerExpansion\bin\Debug\net452\VSCreativeMod.dll
+D:\Github repositories\VintageStoryMods\SettlerExpansion\bin\Debug\net452\VintagestoryAPI.xml
+D:\Github repositories\VintageStoryMods\SettlerExpansion\obj\Debug\net452\Settler.dll
+D:\Github repositories\VintageStoryMods\SettlerExpansion\obj\Debug\net452\Settler.pdb

@@ -1,0 +1,11 @@
+D:\Github repositories\VintageStoryMods\StressfulLife\obj\Debug\net452\StressfulLife.csproj.CoreCompileInputs.cache
+D:\Github repositories\VintageStoryMods\StressfulLife\obj\Debug\net452\StressfulLife.AssemblyInfoInputs.cache
+D:\Github repositories\VintageStoryMods\StressfulLife\obj\Debug\net452\StressfulLife.AssemblyInfo.cs
+D:\Github repositories\VintageStoryMods\StressfulLife\bin\Debug\net452\StressfulLife.dll
+D:\Github repositories\VintageStoryMods\StressfulLife\bin\Debug\net452\StressfulLife.pdb
+D:\Github repositories\VintageStoryMods\StressfulLife\bin\Debug\net452\VintagestoryAPI.dll
+D:\Github repositories\VintageStoryMods\StressfulLife\bin\Debug\net452\VSSurvivalMod.dll
+D:\Github repositories\VintageStoryMods\StressfulLife\bin\Debug\net452\VSCreativeMod.dll
+D:\Github repositories\VintageStoryMods\StressfulLife\bin\Debug\net452\VintagestoryAPI.xml
+D:\Github repositories\VintageStoryMods\StressfulLife\obj\Debug\net452\StressfulLife.dll
+D:\Github repositories\VintageStoryMods\StressfulLife\obj\Debug\net452\StressfulLife.pdb

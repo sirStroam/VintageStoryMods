@@ -1,9 +1,9 @@
 {
-	ingredientPattern: "GGG	GGG",
+	ingredientPattern: "H",
 	ingredients: {
-		"G": { type: "item", code: "game:drygrass" }
+		"H": { type: "block", code: "game:hay-normal" }
 	},
-	width: 3,
-	height: 2,
+	width: 1,
+	height: 1,
 	output: { type: "block", code: "haybale-normal-ud", quantity: 1  }
 }

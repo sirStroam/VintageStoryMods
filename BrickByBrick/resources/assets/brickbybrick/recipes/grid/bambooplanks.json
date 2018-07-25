@@ -1,9 +1,9 @@
 {
-	ingredientPattern: "SS	SS",
+	ingredientPattern: "B",
 	ingredients: {
-		"S": { type: "item", code: "game:bamboostakes"  },
+		"B": { type: "block", code: "game:planks-bamboo"  },
 	},
-	width: 2,
-	height: 2,
+	width: 1,
+	height: 1,
 	output: { type: "block", code: "planks-bamboo-ud", quantity: 1  }
 }
